@@ -4,53 +4,83 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Origin of Things</title>
-    
-    <!-- CSS File Link - Ensure file name is exactly style.css -->
     <link rel="stylesheet" href="style.css">
-    
-    <!-- Google Fonts: Poppins and Quicksand -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- Header Section -->
-    <header>
-        <div class="logo">🌌 Origin of Things</div>
-        <p class="tagline">Discover how everything began...</p>
-    </header>
+    <!-- Star Shower Background Container -->
+    <div class="stars" id="stars"></div>
 
-    <!-- Main Content -->
-    <main>
-        <section class="intro">
+    <!-- Hamburger Menu Button (Top Left) -->
+    <div class="menu-btn" id="menuBtn" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <!-- Slide-out Drawer Navigation -->
+    <nav class="side-drawer" id="sideDrawer">
+        <a href="#" onclick="toggleMenu()">Home</a>
+        <a href="#about" onclick="toggleMenu()">About</a>
+        <a href="#chapters" onclick="toggleMenu()">Chapters</a>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="container">
+        
+        <!-- Header -->
+        <header>
+            <h1 class="website-title">🌌 Origin of Things</h1>
+            <p class="subtitle">Discover how everything began...</p>
+        </header>
+
+        <!-- Welcome Section / About -->
+        <section id="about" class="intro-section">
             <h2>Welcome to the Journey of Existence</h2>
             <p>From the vastness of the universe to the screen you are looking at right now, everything has a beginning. Let's explore!</p>
         </section>
 
-        <!-- 10 Topics Grid -->
-        <section class="topics-grid">
-            <div class="card">
-                <h3>1. The Universe</h3>
-                <p>Born from the Big Bang 13.8 billion years ago, creating space, time, and matter.</p>
+        <!-- Chapters Section -->
+        <section id="chapters">
+            <h2 class="section-heading">Chapters</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>1. The Universe</h3>
+                    <p>Born from the Big Bang 13.8 billion years ago, creating space, time, and matter.</p>
+                </div>
+                <div class="card">
+                    <h3>2. The Earth</h3>
+                    <p>Formed 4.5 billion years ago from a cloud of dust and gas around the young Sun.</p>
+                </div>
+                <div class="card">
+                    <h3>3. Water</h3>
+                    <p>Brought to Earth by icy comets and asteroids during the Late Heavy Bombardment.</p>
+                </div>
+                <div class="card">
+                    <h3>4. Life</h3>
+                    <p>Began in the deep oceans around hydrothermal vents nearly 3.5 billion years ago.</p>
+                </div>
+                <div class="card">
+                    <h3>5. Dinosaurs</h3>
+                    <p>Ruled the Earth for 165 million years before a massive asteroid hit.</p>
+                </div>
+                <div class="card">
+                    <h3>6. Humanity</h3>
+                    <p>Homo sapiens evolved in Africa about 300,000 years ago and spread across the globe.</p>
+                </div>
+                <div class="card">
+                    <h3>7. Fire & Technology</h3>
+                    <p>Mastered by early humans to shape civilization, leading up to modern digital eras.</p>
+                </div>
             </div>
-            <div class="card">
-                <h3>2. The Earth</h3>
-                <p>Formed 4.5 billion years ago from a cloud of dust and gas around the young Sun.</p>
+        </section>
+
+        <!-- Quotes Section at the Bottom -->
+        <section class="quotes-section">
+            <h2>Reflections & Wisdom</h2>
+            <div class="quote-card">
+                <p>"We are a way for the cosmos to know itself."</p>
+                <span>— Carl Sagan</span>
             </div>
-            <div class="card">
-                <h3>3. Water</h3>
-                <p>Brought to Earth by icy comets and asteroids during the Late Heavy Bombardment.</p>
-            </div>
-            <div class="card">
-                <h3>4. Life</h3>
-                <p>Began in the deep oceans around hydrothermal vents nearly 3.5 billion years ago.</p>
-            </div>
-            <div class="card">
-                <h3>5. Dinosaurs</h3>
-                <p>Ruled the Earth for 165 million years before a massive asteroid hit.</p>
-            </div>
-            <div class="card">
-                <h3>6. Humanity</h3>
-                <p>Homo sapiens evolved in Africa about 300,000 years ago and spread across the globe.</p>
-            </div>
-            <div class="card">
-                <h3>7. Fire</h3>
+            <div class="quote-card">
+                <p>"Look up at
