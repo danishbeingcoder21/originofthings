@@ -5,45 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Origin of Things</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- Star Shower Background Container -->
-    <div class="stars" id="stars"></div>
-
-    <!-- Hamburger Menu Button (Top Left) -->
-    <div class="menu-btn" id="menuBtn" onclick="toggleMenu()">
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
-
-    <!-- Slide-out Drawer Navigation -->
-    <nav class="side-drawer" id="sideDrawer">
-        <a href="#" onclick="toggleMenu()">Home</a>
-        <a href="#about" onclick="toggleMenu()">About</a>
-        <a href="#chapters" onclick="toggleMenu()">Chapters</a>
+    <!-- Glassmorphism Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-logo">🌌 Origin</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#topics">Topics</a></li>
+            <li><a href="#quiz">Quiz</a></li>
+            <li><a href="#about">About Us</a></li>
+        </ul>
     </nav>
 
-    <!-- Main Container -->
-    <div class="container">
-        
-        <!-- Header -->
-        <header>
-            <h1 class="website-title">🌌 Origin of Things</h1>
-            <p class="subtitle">Discover how everything began...</p>
-        </header>
+    <!-- Header Section -->
+    <header id="home">
+        <div class="logo">🌌 Origin of Things</div>
+        <p class="tagline">Discover how everything began...</p>
+    </header>
 
-        <!-- Welcome Section / About -->
-        <section id="about" class="intro-section">
+    <main>
+        <!-- Intro Section -->
+        <section class="intro reveal">
             <h2>Welcome to the Journey of Existence</h2>
             <p>From the vastness of the universe to the screen you are looking at right now, everything has a beginning. Let's explore!</p>
         </section>
 
-        <!-- Chapters Section -->
-        <section id="chapters">
-            <h2 class="section-heading">Chapters</h2>
-            <div class="grid">
+        <!-- Topics Grid -->
+        <section id="topics" class="topics-section reveal">
+            <h2 class="section-title">✨ Fascinating Origins</h2>
+            <div class="topics-grid">
                 <div class="card">
                     <h3>1. The Universe</h3>
                     <p>Born from the Big Bang 13.8 billion years ago, creating space, time, and matter.</p>
@@ -69,18 +63,53 @@
                     <p>Homo sapiens evolved in Africa about 300,000 years ago and spread across the globe.</p>
                 </div>
                 <div class="card">
-                    <h3>7. Fire & Technology</h3>
-                    <p>Mastered by early humans to shape civilization, leading up to modern digital eras.</p>
+                    <h3>7. Fire</h3>
+                    <p>First controlled by our early ancestors around 1 million years ago.</p>
+                </div>
+                <div class="card">
+                    <h3>8. The Wheel</h3>
+                    <p>Invented around 3500 BC in Mesopotamia, originally used for making pottery!</p>
+                </div>
+                <div class="card">
+                    <h3>9. Electricity</h3>
+                    <p>Discovered over centuries, but harnessed for human use in the late 19th century.</p>
+                </div>
+                <div class="card">
+                    <h3>10. The Internet</h3>
+                    <p>Created in the 1960s as ARPANET, connecting humanity in ways never imagined before.</p>
                 </div>
             </div>
         </section>
 
-        <!-- Quotes Section at the Bottom -->
-        <section class="quotes-section">
-            <h2>Reflections & Wisdom</h2>
-            <div class="quote-card">
-                <p>"We are a way for the cosmos to know itself."</p>
-                <span>— Carl Sagan</span>
+        <!-- Knowledge Quiz Section -->
+        <section id="quiz" class="quiz-section reveal">
+            <h2>🧠 Fun Knowledge Quiz</h2>
+            <div class="quiz-box">
+                <p id="question">What was the original use of the wheel?</p>
+                <div class="options">
+                    <button class="quiz-btn" onclick="checkAnswer(this, 'wrong')">Chariots</button>
+                    <button class="quiz-btn" onclick="checkAnswer(this, 'correct')">Making Pottery</button>
+                    <button class="quiz-btn" onclick="checkAnswer(this, 'wrong')">Grinding Grain</button>
+                    <button class="quiz-btn" onclick="checkAnswer(this, 'wrong')">Toys</button>
+                </div>
+                <p id="quiz-result"></p>
             </div>
-            <div class="quote-card">
-                <p>"Look up at
+        </section>
+
+        <!-- New About Us Section -->
+        <section id="about" class="about-section reveal">
+            <h2>About This Project</h2>
+            <p><strong>Origin of Things</strong> is an interactive web experience designed for curious minds. We believe learning should be fun, visually pleasing, and engaging. This project is proudly hosted on GitHub Pages.</p>
+        </section>
+    </main>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" title="Go to top">⬆️</button>
+
+    <footer>
+        <p>Created with ❤️ for GitHub | Origin of Things © 2026</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
