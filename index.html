@@ -3,254 +3,342 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Origin of Things - The Cozy Human Archive</title>
+    <title>Origin of Things | Chronicle of Existence</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Google Fonts for cozy reading -->
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- Ambient Star Shower Animation Background -->
-    <div class="star-shower">
-        <span class="star"></span>
-        <span class="star"></span>
-        <span class="star"></span>
-        <span class="star"></span>
-        <span class="star"></span>
-        <span class="star"></span>
-        <span class="star"></span>
-        <span class="star"></span>
-    </div>
+    <!-- Star/Meteor Shower Background Canvas -->
+    <canvas id="starShower"></canvas>
 
-    <!-- Navigation Header -->
+    <!-- Glass Sticky Navbar -->
     <nav class="navbar">
-        <div class="nav-brand">
-            <span class="brand-icon">📜</span>
-            <span class="brand-title">Origin of Things</span>
-        </div>
-        <ul class="nav-menu">
-            <li><a href="#hero">Home</a></li>
+        <div class="nav-logo">✦ ORIGIN</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
             <li><a href="#articles">Articles (20)</a></li>
-            <li><a href="#quiz">Origin Quiz</a></li>
+            <li><a href="#quiz">Quiz Lab</a></li>
             <li><a href="#about">About</a></li>
         </ul>
     </nav>
 
-    <!-- Hero / Welcome Section -->
-    <header id="hero" class="hero-section">
-        <div class="hero-badge">🌌 The Story of Everything We Touch & See</div>
-        <h1 class="hero-title">How Did the World Come to Be?</h1>
-        <p class="hero-subtitle">
-            A cozy nocturnal archive documenting the serendipitous discoveries, deep cosmic origins, and ancient inventions that built our civilization.
-        </p>
-        <div class="hero-buttons">
-            <a href="#articles" class="btn btn-primary">Start Reading (20 Topics)</a>
-            <a href="#quiz" class="btn btn-secondary">Test Your Knowledge</a>
+    <!-- Hero / Home Section -->
+    <header id="home" class="hero">
+        <div class="hero-badge">Curated Encyclopedia of Genesis</div>
+        <h1 class="hero-title">Origin of Things</h1>
+        <p class="hero-tagline">Trace the scientific, technological, and cosmic roots of our universe from the dawn of time to the modern epoch.</p>
+        
+        <div class="hero-actions">
+            <a href="#articles" class="btn btn-primary">Browse 20 Chronicles</a>
+            <a href="#quiz" class="btn btn-secondary">Take The Quiz</a>
+        </div>
+
+        <!-- Quick Stats Strip -->
+        <div class="stat-strip">
+            <div class="stat-item">
+                <span class="stat-num">13.8 B</span>
+                <span class="stat-label">Years of History</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-num">20</span>
+                <span class="stat-label">In-depth Chapters</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-num">100%</span>
+                <span class="stat-label">Fact-Checked Trivia</span>
+            </div>
         </div>
     </header>
 
-    <main class="content-wrapper">
-        <!-- 20 In-Depth Articles Section -->
-        <section id="articles" class="section-container">
-            <div class="section-header">
-                <span class="section-tag">ARCHIVAL RECORDS</span>
-                <h2>20 Fascinating Origins from Human & Cosmic History</h2>
-                <p>Curated knowledge distilled into bite-sized, eye-comfort articles.</p>
-            </div>
-
-            <div class="articles-grid">
-                <!-- Article 1 -->
-                <article class="article-card">
-                    <span class="card-category cosmos">COSMOS</span>
-                    <h3>1. The Origin of Gold</h3>
-                    <p class="article-text">All gold found in your jewelry, electronics, and underground deposits was not forged on Earth. It was generated during high-energy collisions of neutron stars and ancient supernovae billions of years ago, later raining onto Earth during planetary cooling.</p>
-                    <div class="fact-box">✨ <strong>Fact:</strong> A single teaspoon of a neutron star would weigh billions of tons.</div>
-                </article>
-
-                <!-- Article 2 -->
-                <article class="article-card">
-                    <span class="card-category earth">NATURAL WORLD</span>
-                    <h3>2. The Origin of Liquid Water</h3>
-                    <p class="article-text">Water did not naturally condense during Earth's fiery formation. Most planetary scientists attribute our oceans to the 'Late Heavy Bombardment' around 3.9 billion years ago, when thousands of water-rich carbonaceous chondrite asteroids repeatedly smashed into young Earth.</p>
-                    <div class="fact-box">🌊 <strong>Fact:</strong> The water you drank today is around 4.5 billion years old.</div>
-                </article>
-
-                <!-- Article 3 -->
-                <article class="article-card">
-                    <span class="card-category invention">EVERYDAY INVENTIONS</span>
-                    <h3>3. The Origin of Coffee</h3>
-                    <p class="article-text">Legend traces coffee back to 9th-century Ethiopian goat herder Kaldi, who noticed his goats became unusually hyperactive and danced after chewing bright red berries from a wild bush. Monks boiled the berries to create a dark elixir allowing long night prayers.</p>
-                    <div class="fact-box">☕ <strong>Fact:</strong> The world's first coffee houses were known as 'Penny Universities'.</div>
-                </article>
-
-                <!-- Article 4 -->
-                <article class="article-card">
-                    <span class="card-category society">CIVILIZATION</span>
-                    <h3>4. The Origin of the Weekend</h3>
-                    <p class="article-text">For millennia, workers toiled 6 to 7 days a week. In 1908, a New England cotton mill became the first US factory to grant a five-day workweek so Jewish employees could observe Saturday Shabbat without penalties. Henry Ford popularized the standard 40-hour weekend in 1926.</p>
-                    <div class="fact-box">⏳ <strong>Fact:</strong> Ford proved productivity rose significantly when workers got two days of rest.</div>
-                </article>
-
-                <!-- Article 5 -->
-                <article class="article-card">
-                    <span class="card-category technology">TECH & MEDIA</span>
-                    <h3>5. The Origin of Wi-Fi</h3>
-                    <p class="article-text">Hollywood movie actress Hedy Lamarr co-invented frequency-hopping spread-spectrum technology during WWII to prevent radio-guided torpedoes from being jammed. Decades later, Australian astrophysicist John O'Sullivan adapted it while researching evaporated black holes, sparking modern Wi-Fi.</p>
-                    <div class="fact-box">📡 <strong>Fact:</strong> Wi-Fi stands for nothing—it was simply a marketing rhyming term for 'Hi-Fi'.</div>
-                </article>
-
-                <!-- Article 6 -->
-                <article class="article-card">
-                    <span class="card-category invention">EVERYDAY INVENTIONS</span>
-                    <h3>6. The Origin of Matches</h3>
-                    <p class="article-text">Before matches, making fire required flint and friction. In 1826, British chemist John Walker was stirring a pot of antimony sulfide and potassium chlorate with a wooden stick. He scraped off a dried lump against the stone hearth, accidentally creating the first friction strike-match.</p>
-                    <div class="fact-box">🔥 <strong>Fact:</strong> Walker never patented his match, wishing it to be free for humanity.</div>
-                </article>
-
-                <!-- Article 7 -->
-                <article class="article-card">
-                    <span class="card-category society">CIVILIZATION</span>
-                    <h3>7. The Origin of Money (Coinage)</h3>
-                    <p class="article-text">Early human civilizations used gift economies and tally marks. Standardized metallic coins originated around 600 BC in the ancient kingdom of Lydia (modern Turkey). Stamped from Electrum (a natural gold-silver alloy), stamped lion heads guaranteed official state weight.</p>
-                    <div class="fact-box">🪙 <strong>Fact:</strong> Paper bank notes originated later in 7th-century Tang Dynasty China.</div>
-                </article>
-
-                <!-- Article 8 -->
-                <article class="article-card">
-                    <span class="card-category earth">NATURAL WORLD</span>
-                    <h3>8. The Origin of Trees</h3>
-                    <p class="article-text">For almost 90% of Earth's history, trees did not exist; giant 24-foot mushrooms called <em>Prototaxites</em> dominated the terrestrial surface. Trees evolved roughly 385 million years ago (Devonian period), radically lowering atmospheric carbon dioxide and creating our modern breathable air.</p>
-                    <div class="fact-box">🌲 <strong>Fact:</strong> Sharks are older than both trees and Saturn's rings.</div>
-                </article>
-
-                <!-- Article 9 -->
-                <article class="article-card">
-                    <span class="card-category invention">EVERYDAY INVENTIONS</span>
-                    <h3>9. The Origin of the Mirror</h3>
-                    <p class="article-text">Early civilizations looked into pooled water or obsidian (volcanic glass) polished to a dark sheen. Modern flat glass mirrors were perfected in Renaissance Venice on the island of Murano, where artisans guarded the secret formula of coating glass with reflective mercury-tin amalgams under penalty of death.</p>
-                    <div class="fact-box">🪞 <strong>Fact:</strong> Venetian mirrors were once valued higher than major Renaissance paintings.</div>
-                </article>
-
-                <!-- Article 10 -->
-                <article class="article-card">
-                    <span class="card-category technology">TECH & MEDIA</span>
-                    <h3>10. The Origin of the Computer Mouse</h3>
-                    <p class="article-text">Invented in 1964 by Douglas Engelbart at Stanford Research Institute, the first mouse was a carved wooden block containing two metallic wheels sitting perpendicular to each other. It earned its nickname simply because the connecting cord emerged like a rodent's tail.</p>
-                    <div class="fact-box">🖱️ <strong>Fact:</strong> Engelbart never received royalties because his patent expired before personal computers boomed.</div>
-                </article>
-
-                <!-- Article 11 -->
-                <article class="article-card">
-                    <span class="card-category science">MEDICINE & SCIENCE</span>
-                    <h3>11. The Origin of Penicillin (Antibiotics)</h3>
-                    <p class="article-text">In August 1928, Scottish physician Alexander Fleming went on holiday and left a stack of <em>Staphylococcus</em> petri dishes uncleaned by an open laboratory window. Upon returning, he discovered a rogue blue-green mold halo that had killed all neighboring bacteria dead in their tracks.</p>
-                    <div class="fact-box">💊 <strong>Fact:</strong> Penicillin saved an estimated 200 million lives in the 20th century alone.</div>
-                </article>
-
-                <!-- Article 12 -->
-                <article class="article-card">
-                    <span class="card-category society">CIVILIZATION</span>
-                    <h3>12. The Origin of Zero (0)</h3>
-                    <p class="article-text">While Babylonians used placeholders, Indian mathematician Brahmagupta in 628 AD formally defined zero (<em>Shunya</em>) as an actual numeral with mathematical rules ($a - a = 0$). It traveled through Persian scholars like Al-Khwarizmi before radically transforming European algebra and computation.</p>
-                    <div class="fact-box">0️⃣ <strong>Fact:</strong> Roman numerals collapsed in complex trade because they lacked the concept of zero.</div>
-                </article>
-
-                <!-- Article 13 -->
-                <article class="article-card">
-                    <span class="card-category invention">FOOD & INVENTIONS</span>
-                    <h3>13. The Origin of Chocolate</h3>
-                    <p class="article-text">Chocolate was consumed for over 3,000 years by the Olmec, Maya, and Aztec as a bitter, frothy, spicy beverage brewed with chili peppers and vanilla. Cocoa beans held such sacred worth they were used as everyday currency—one pumpkin cost roughly four beans.</p>
-                    <div class="fact-box">🍫 <strong>Fact:</strong> Solid sweet chocolate bars only emerged in 1847 via British company J.S. Fry & Sons.</div>
-                </article>
-
-                <!-- Article 14 -->
-                <article class="article-card">
-                    <span class="card-category cosmos">COSMOS</span>
-                    <h3>14. The Origin of the Moon</h3>
-                    <p class="article-text">The leading scientific theory (The Giant Impact Hypothesis) states that 4.5 billion years ago, a Mars-sized proto-planet named Theia smashed into our infant Earth. The vaporized crust and mantle debris entered orbit, rapidly coalescing within a matter of centuries into our Moon.</p>
-                    <div class="fact-box">🌕 <strong>Fact:</strong> The Moon moves roughly 3.8 centimeters farther away from Earth every single year.</div>
-                </article>
-
-                <!-- Article 15 -->
-                <article class="article-card">
-                    <span class="card-category society">CIVILIZATION</span>
-                    <h3>15. The Origin of Soap</h3>
-                    <p class="article-text">Archaeologists recovered soap cylinders dating back to 2800 BC in ancient Babylon. Clay inscriptions show they boiled fats with wood ashes (alkali). Legend says Roman women washing clothes in the Tiber River discovered soap formed when animal sacrifices on Mount Sapo washed ashes into river mud.</p>
-                    <div class="fact-box">🧼 <strong>Fact:</strong> The word 'soap' originates from Latin <em>sapo</em>.</div>
-                </article>
-
-                <!-- Article 16 -->
-                <article class="article-card">
-                    <span class="card-category technology">TECH & MEDIA</span>
-                    <h3>16. The Origin of the QWERTY Keyboard</h3>
-                    <p class="article-text">Invented by Christopher Latham Sholes in 1873, typewriter metal typebars frequently clashed and jammed together if adjacent keys were struck in quick succession. Sholes deliberately separated common letter pairings (like S-T and T-H) across the rows to slow typists down mechanically.</p>
-                    <div class="fact-box">⌨️ <strong>Fact:</strong> You can type the word 'TYPEWRITER' using solely the top row of keys.</div>
-                </article>
-
-                <!-- Article 17 -->
-                <article class="article-card">
-                    <span class="card-category invention">EVERYDAY INVENTIONS</span>
-                    <h3>17. The Origin of the Pencil</h3>
-                    <p class="article-text">In 1564, a violent storm uprooted huge trees in Borrowdale, England, exposing a massive deposit of pure, solid graphite. Locals initially used the shiny black mineral to brand sheep. Because it was brittle, writers soon encased graphite sticks inside hollowed cedar wood casings.</p>
-                    <div class="fact-box">✏️ <strong>Fact:</strong> Pencils never contained toxic lead; people simply confused graphite with black lead.</div>
-                </article>
-
-                <!-- Article 18 -->
-                <article class="article-card">
-                    <span class="card-category earth">NATURAL WORLD</span>
-                    <h3>18. The Origin of Glass</h3>
-                    <p class="article-text">Before human manufacture, glass existed in nature as obsidian (volcanic glass) and fulgurites (tubes created when lightning strikes silica beach sand at 1800°C). Pliny the Elder wrote that Syrian merchants cooking over beach sand accidentally melted soda blocks with beach quartz.</p>
-                    <div class="fact-box">⚡ <strong>Fact:</strong> A single lightning strike creates natural glass branches deep underground.</div>
-                </article>
-
-                <!-- Article 19 -->
-                <article class="article-card">
-                    <span class="card-category society">CIVILIZATION</span>
-                    <h3>19. The Origin of Fingerprints in Forensics</h3>
-                    <p class="article-text">Sir William Herschel, working in British India in 1858, began collecting handprints on contracts to deter fraud. Scottish physician Henry Faulds later realized fingerprint ridge patterns were unique to every individual and could never change, helping solve the world's first burglary in Tokyo.</p>
-                    <div class="fact-box">🔍 <strong>Fact:</strong> Even identical twins with identical DNA carry completely different fingerprints.</div>
-                </article>
-
-                <!-- Article 20 -->
-                <article class="article-card">
-                    <span class="card-category technology">TECH & MEDIA</span>
-                    <h3>20. The Origin of the Smiley Face Emoji 🙂</h3>
-                    <p class="article-text">On September 19, 1982, computer scientist Scott Fahlman posted a message on Carnegie Mellon University's electronic bulletin board proposing <code>:-)</code> to mark sarcastic jokes and <code>:-(</code> for serious matters. It quickly spread through ARPANET, fathering digital emotional communication.</p>
-                    <div class="fact-box">😀 <strong>Fact:</strong> The original post was lost for 20 years before backup tapes were excavated in 2002.</div>
-                </article>
+    <main>
+        <!-- Search and Filter Bar -->
+        <section class="search-section">
+            <div class="search-box">
+                <input type="text" id="articleSearch" placeholder="Search any topic (e.g., Coffee, Internet, Universe)..." onkeyup="filterArticles()">
             </div>
         </section>
 
-        <!-- Interactive Quiz Section -->
-        <section id="quiz" class="section-container">
-            <div class="quiz-container">
-                <span class="section-tag">INTERACTIVE TEST</span>
-                <h2>Origin Master Quiz</h2>
-                <p>Test what you just learned. Click the right answer!</p>
-                
-                <div class="quiz-card" id="quiz-block">
-                    <div class="quiz-progress" id="quiz-progress">Question 1 of 4</div>
-                    <h3 id="quiz-question" class="question-title">Where was the world's gold forged?</h3>
-                    <div class="quiz-grid" id="quiz-options">
-                        <!-- Options populated dynamically or manually -->
+        <!-- 20 Detailed Articles Section -->
+        <section id="articles" class="articles-section">
+            <div class="section-header">
+                <span class="sub-heading">ARCHIVES</span>
+                <h2>The 20 Chronicles of Origin</h2>
+                <p>Read detailed, Wikipedia-backed stories on how these essentials came into being.</p>
+            </div>
+
+            <div class="articles-grid" id="articlesGrid">
+
+                <!-- Article 1 -->
+                <article class="article-card" data-title="Universe Big Bang">
+                    <div class="card-meta">
+                        <span class="badge cosmic">Cosmology</span>
+                        <span class="timestamp">~13.8 Billion B.C.</span>
                     </div>
-                    <div id="quiz-feedback" class="feedback-msg"></div>
-                    <button id="next-btn" class="btn btn-primary" style="display:none; margin: 1.5rem auto 0;" onclick="loadNextQuestion()">Next Question ➔</button>
+                    <h3>1. The Universe (The Big Bang)</h3>
+                    <p class="summary">The entire observable cosmos originated from an infinitesimally dense, hot singularity that expanded violently in cosmic inflation, creating spacetime, subatomic particles, and fundamental forces.</p>
+                    <div class="wiki-note"><strong>Wikipedia Fact:</strong> Edwin Hubble discovered in 1929 that distant galaxies are moving away from us, proving the universe is constantly expanding.</div>
+                </article>
+
+                <!-- Article 2 -->
+                <article class="article-card" data-title="Earth Formation">
+                    <div class="card-meta">
+                        <span class="badge geology">Planetary</span>
+                        <span class="timestamp">~4.54 Billion B.C.</span>
+                    </div>
+                    <h3>2. Planet Earth</h3>
+                    <p class="summary">Formed through accretion from the solar nebula — a swirling disc of dust and gas leftover from the Sun's creation. Heavy metals sank to create the iron core, yielding our protective magnetic field.</p>
+                    <div class="wiki-note"><strong>Wikipedia Fact:</strong> The Giant Impact Hypothesis posits that Earth collided with a Mars-sized planetoid named Theia to create our Moon.</div>
+                </article>
+
+                <!-- Article 3 -->
+                <article class="article-card" data-title="Water Oceans Hydrology">
+                    <div class="card-meta">
+                        <span class="badge science">Hydrology</span>
+                        <span class="timestamp">~4.4 Billion B.C.</span>
+                    </div>
+                    <h3>3. Liquid Water</h3>
+                    <p class="summary">Earth's water is believed to be older than the Sun itself. Primordial water originated from volcanic outgassing and asteroid/comet bombardment during the Late Heavy Bombardment epoch.</p>
+                    <div class="wiki-note"><strong>Wikipedia Fact:</strong> Deuterium-to-hydrogen ratios prove carbonaceous chondrite meteorites carried the majority of water to early Earth.</div>
+                </article>
+
+                <!-- Article 4 -->
+                <article class="article-card" data-title="Life Abiogenesis Biology">
+                    <div class="card-meta">
+                        <span class="badge bio">Biology</span>
+                        <span class="timestamp">~3.7 Billion B.C.</span>
+                    </div>
+                    <h3>4. Life (Abiogenesis)</h3>
+                    <p class="summary">Life sparked in deep oceanic hydrothermal vents, where mineral rich thermal gradients synthesized organic molecules like RNA, giving rise to LUCA (Last Universal Common Ancestor).</p>
+                    <div class="wiki-note"><strong>Wikipedia Fact:</strong> Stromatolites found in Western Australia represent the earliest fossil evidence of microbial mats dating back 3.48 billion years.</div>
+                </article>
+
+                <!-- Article 5 -->
+                <article class="article-card" data-title="Dinosaurs Paleontology">
+                    <div class="card-meta">
+                        <span class="badge bio">Paleontology</span>
+                        <span class="timestamp">~243 Million B.C.</span>
+                    </div>
+                    <h3>5. The Dinosaurs</h3>
+                    <p class="summary">Appearing during the Triassic period, dinosaurs dominated terrestrial ecosystems for 165 million years until the Chicxulub asteroid impact triggered the Cretaceous–Paleogene extinction.</p>
+                    <div class="wiki-note"><strong>Wikipedia Fact:</strong> Modern birds are avian dinosaurs belonging to the Theropod clade, meaning dinosaurs never truly went extinct.</div>
+                </article>
+
+                <!-- Article 6 -->
+                <article class="article-card" data-title="Humanity Homo sapiens Anthropology">
+                    <div class="card-meta">
+                        <span class="badge human">Anthropology</span>
+                        <span class="timestamp">~300,000 B.C.</span>
+                    </div>
+                    <h3>6. Anatomically Modern Humans</h3>
+                    <p class="summary">Homo sapiens emerged in the African continent, distinguished by advanced cognition, symbolic culture, complex language, and interbreeding with archaic hominins like Neanderthals.</p>
+                    <div class="wiki-note"><strong>Wikipedia Fact:</strong> The oldest discovered skeletal remains of modern Homo sapiens were unearthed in Jebel Irhoud, Morocco.</div>
+                </article>
+
+                <!-- Article 7 -->
+                <article class="article-card" data-title="Fire Cooking Pyrotechnology">
+                    <div class="card-meta">
+                        <span class="badge tech">Survival Tech</span>
+                        <span class="timestamp">~1.0 Million B.C.</span>
+                    </div>
+                    <h3>7. Controlled Fire</h3>
+                    <p class="summary">Harnessed by Homo erectus, fire transformed human biology. Cooking food reduced digestive energy, catalyzing rapid brain growth and establishing communal campfires.</p>
+                    <div class="wiki-note"><strong>Wikipedia Fact:</strong> Microscopic traces of wood ash in South Africa's Wonderwerk Cave confirm deliberate hearth combustion 1 million years ago.</div>
+                </article>
+
+                <!-- Article 8 -->
+                <article class="article-card" data-title="Wheel Mechanics Invention">
+                    <div class="card-meta">
+                        <span class="badge tech">Mechanics</span>
+                        <span class="timestamp">~4,000 B.C.</span>
+                    </div>
+                    <h3>8. The Wheel</h3>
+                    <p class="summary">Contrary to popular belief, wheels were not invented for carts. They emerged as potter's wheels in Mesopotamia and only centuries later were combined with axled vehicles for transit.</p>
+                    <div class="wiki-note"><strong>Wikipedia Fact:</strong> The wheel is entirely anthropogenic — no mechanical wheel-and-axle exists in macro nature due to vascular tissue constraints.</div>
+                </article>
+
+                <!-- Article 9 -->
+                <article class="article-card" data-title="Writing Language Cuneiform">
+                    <div class="card-meta">
+                        <span class="badge history">Linguistics</span>
+                        <span class="timestamp">~3,400 B.C.</span>
+                    </div>
+                    <h3>9. Written Language</h3>
+                    <p class="summary">Originating in Sumer (modern Iraq) as Cuneiform, writing began not for literature, but as accounting ledgers to record grain, cattle, and tax debts on clay tablets.</p>
+                    <div class="wiki-note"><strong>Wikipedia Fact:</strong> The world's oldest recorded customer complaint was written on a cuneiform tablet by Nanni to merchant Ea-nasir concerning bad copper.</div>
+                </article>
+
+                <!-- Article 10 -->
+                <article class="article-card" data-title="Money Currency Coins">
+                    <div class="card-meta">
+                        <span class="badge history">Economics</span>
+                        <span class="timestamp">~600 B.C.</span>
+                    </div>
+                    <h3>10. Money & Minted Coins</h3>
+                    <p class="summary">Barter systems faced the 'coincidence of wants' dilemma. The Kingdom of Lydia (modern Turkey) minted the first stamped coins from electrum (natural gold-silver alloy).</p>
+                    <div class="wiki-note"><strong>Wikipedia Fact:</strong> Paper fiat currency was pioneered during the Song Dynasty in 7th century China, originally as redeemable promissory notes.</div>
+                </article>
+
+                <!-- Article 11 -->
+                <article class="article-card" data-title="Paper Papyrus Printing">
+                    <div class="card-meta">
+                        <span class="badge tech">Media</span>
+                        <span class="timestamp">~105 A.D.</span>
+                    </div>
+                    <h3>11. Paper Manufacture</h3>
+                    <p class="summary">Cai Lun, a court official during China's Han Dynasty, invented papermaking using pulverized mulberry bark, hemp waste, rags, and fishnet pulp suspended in water molds.</p>
+                    <div class="wiki-note"><strong>Wikipedia Fact:</strong> The secret of paper reached Europe via the Battle of Talas in 751 AD when Islamic armies captured Chinese papermakers.</div>
+                </article>
+
+                <!-- Article 12 -->
+                <article class="article-card" data-title="Printing Press Gutenberg">
+                    <div class="card-meta">
+                        <span class="badge tech">Revolution</span>
+                        <span class="timestamp">~1440 A.D.</span>
+                    </div>
+                    <h3>12. The Printing Press</h3>
+                    <p class="summary">Johannes Gutenberg integrated movable metal type, oil-based inks, and wooden screw presses, igniting the European Renaissance, Protestant Reformation, and Scientific Revolution.</p>
+                    <div class="wiki-note"><strong>Wikipedia Fact:</strong> Before Gutenberg, an entire European monastery scribed only 1–2 books per year by hand using animal vellum.</div>
+                </article>
+
+                <!-- Article 13 -->
+                <article class="article-card" data-title="Coffee Caffeine Beverages">
+                    <div class="card-meta">
+                        <span class="badge culture">Botany</span>
+                        <span class="timestamp">~850 A.D.</span>
+                    </div>
+                    <h3>13. Coffee</h3>
+                    <p class="summary">Discovered on the Ethiopian plateau when goatherd Kaldi observed his goats dancing with energy after chewing red berries from the Coffea arabica shrub.</p>
+                    <div class="wiki-note"><strong>Wikipedia Fact:</strong> The 17th-century European coffeehouses were named "penny universities" because a penny bought coffee and intellectual debate.</div>
+                </article>
+
+                <!-- Article 14 -->
+                <article class="article-card" data-title="Antibiotics Penicillin Fleming">
+                    <div class="card-meta">
+                        <span class="badge med">Medicine</span>
+                        <span class="timestamp">1928 A.D.</span>
+                    </div>
+                    <h3>14. Antibiotics (Penicillin)</h3>
+                    <p class="summary">Alexander Fleming returned to his untidy London laboratory to discover mould (Penicillium notatum) had contaminated a Staphylococcus petri dish, secreting a bacteria-killing liquid.</p>
+                    <div class="wiki-note"><strong>Wikipedia Fact:</strong> The mass production of penicillin saved an estimated 100 million lives during WWII and revolutionized modern surgery.</div>
+                </article>
+
+                <!-- Article 15 -->
+                <article class="article-card" data-title="Electricity Faraday Tesla Edison">
+                    <div class="card-meta">
+                        <span class="badge science">Physics</span>
+                        <span class="timestamp">1831 A.D.</span>
+                    </div>
+                    <h3>15. Electromagnetic Generation</h3>
+                    <p class="summary">While static electricity was known to Greeks through amber rubbing, Michael Faraday unveiled electromagnetic induction, moving magnets within wire coils to produce alternating electric current.</p>
+                    <div class="wiki-note"><strong>Wikipedia Fact:</strong> The "War of the Currents" between Edison's DC and Tesla/Westinghouse's AC established alternating current as the global grid power standard.</div>
+                </article>
+
+                <!-- Article 16 -->
+                <article class="article-card" data-title="Aviation Aeroplane Wright Brothers">
+                    <div class="card-meta">
+                        <span class="badge tech">Aeronautics</span>
+                        <span class="timestamp">1903 A.D.</span>
+                    </div>
+                    <h3>16. Powered Flight</h3>
+                    <p class="summary">Orville and Wilbur Wright achieved the first controlled, sustained flight in a gasoline-engine heavier-than-air biplane at Kitty Hawk, North Carolina, staying aloft for 12 seconds.</p>
+                    <div class="wiki-note"><strong>Wikipedia Fact:</strong> Their key breakthrough was 3-axis control (wing warping, rudder, elevator), solving equilibrium rather than just lift.</div>
+                </article>
+
+                <!-- Article 17 -->
+                <article class="article-card" data-title="Computer Turing Transistor Silicon">
+                    <div class="card-meta">
+                        <span class="badge tech">Computing</span>
+                        <span class="timestamp">1936 A.D.</span>
+                    </div>
+                    <h3>17. Programmable Computers</h3>
+                    <p class="summary">Rooted in Alan Turing's theoretical Universal Machine and Babbage's mechanical Analytical Engine, computing leaped forward with the 1947 invention of the silicon semiconductor transistor.</p>
+                    <div class="wiki-note"><strong>Wikipedia Fact:</strong> ENIAC (1945), one of the first electronic general-purpose computers, contained 18,000 vacuum tubes and weighed 30 metric tons.</div>
+                </article>
+
+                <!-- Article 18 -->
+                <article class="article-card" data-title="Internet ARPANET Network">
+                    <div class="card-meta">
+                        <span class="badge tech">Cyber</span>
+                        <span class="timestamp">1969 A.D.</span>
+                    </div>
+                    <h3>18. The Internet</h3>
+                    <p class="summary">Funded by the US Department of Defense (DARPA), ARPANET sent the first packet-switched message ("LO") between UCLA and Stanford computers, establishing the groundwork for TCP/IP.</p>
+                    <div class="wiki-note"><strong>Wikipedia Fact:</strong> The message was meant to be "LOGIN", but the system crashed right after transmitting the letters "L" and "O".</div>
+                </article>
+
+                <!-- Article 19 -->
+                <article class="article-card" data-title="World Wide Web Berners Lee HTTP">
+                    <div class="card-meta">
+                        <span class="badge tech">Software</span>
+                        <span class="timestamp">1989 A.D.</span>
+                    </div>
+                    <h3>19. The World Wide Web</h3>
+                    <p class="summary">Sir Tim Berners-Lee at CERN proposed a global hypertext system to link research papers via HTTP, HTML, and URLs, liberating information globally and donating the code royalty-free.</p>
+                    <div class="wiki-note"><strong>Wikipedia Fact:</strong> The very first webpage is still viewable at `info.cern.ch`, hosted on Berners-Lee's NeXT workstation.</div>
+                </article>
+
+                <!-- Article 20 -->
+                <article class="article-card" data-title="Artificial Intelligence Machine Learning Neural">
+                    <div class="card-meta">
+                        <span class="badge tech">Cognition</span>
+                        <span class="timestamp">1956 A.D.</span>
+                    </div>
+                    <h3>20. Artificial Intelligence</h3>
+                    <p class="summary">Formally born at the Dartmouth Summer Research Workshop, AI transitioned from symbolic logic trees to deep artificial neural networks capable of natural language, pattern inference, and reasoning.</p>
+                    <div class="wiki-note"><strong>Wikipedia Fact:</strong> The phrase "Artificial Intelligence" was coined in 1955 by computer scientist John McCarthy in a conference proposal.</div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Dynamic Multi-Question Quiz Section -->
+        <section id="quiz" class="quiz-section">
+            <div class="quiz-container">
+                <span class="sub-heading">KNOWLEDGE DRILL</span>
+                <h2>The Origin Master Quiz</h2>
+                <p>Test your mastery across cosmic, anthropological, and technological genesis.</p>
+
+                <div class="quiz-card">
+                    <div class="quiz-header">
+                        <span id="questionCount">Question 1 of 5</span>
+                        <span id="scoreDisplay">Score: 0</span>
+                    </div>
+                    
+                    <div class="progress-bar">
+                        <div id="progressFill" class="progress-fill"></div>
+                    </div>
+
+                    <h3 id="quizQuestion" class="quiz-title">Loading Question...</h3>
+
+                    <div id="quizOptions" class="options-container">
+                        <!-- Options injected by JavaScript -->
+                    </div>
+
+                    <div id="quizFeedback" class="feedback-box"></div>
+
+                    <button id="nextBtn" class="btn btn-primary" onclick="loadNextQuestion()" style="display:none; margin: 1.5rem auto 0;">Next Challenge ➔</button>
                 </div>
             </div>
         </section>
 
         <!-- About Section -->
-        <section id="about" class="section-container about-box">
-            <h3>About "Origin of Things"</h3>
-            <p>This project was crafted to celebrate human curiosity through soothing, eye-friendly design. No harsh blue glare, no clinical white walls—just cozy night reading, serendipitous knowledge, and subtle celestial animations.</p>
-            <p class="signature">Curated with patience &bull; Ready for GitHub Pages</p>
+        <section id="about" class="about-section">
+            <div class="about-card">
+                <h2>Behind Origin of Things</h2>
+                <p>Designed as a minimalist, dark-mode pedagogical gateway, <strong>Origin of Things</strong> distills massive academic historical milestones into byte-sized, visually comfortable summaries. Made for coders, thinkers, and explorers.</p>
+                <div class="author-tag">Built for GitHub Pages • Eye Comfort Certified</div>
+            </div>
         </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <p>Origin of Things &copy; 2026 &bull; Designed for Night Thinkers</p>
+    <!-- Scroll To Top Button -->
+    <button id="backToTop" title="Scroll Up">↑</button>
+
+    <footer>
+        <p>Origin of Things © 2026 • Encrypted in Open Knowledge</p>
     </footer>
 
     <script src="script.js"></script>
