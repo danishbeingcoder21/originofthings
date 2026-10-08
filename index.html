@@ -1,296 +1,92 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f5f0e6">
-  <meta name="description" content="Origin is a quiet, curious archive of ten stories that shaped our world—from the first cities to the first messages sent into space.">
-  <title>Origin — A living history archive</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Origin of Things</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Importing lovely fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="ambient-glow" aria-hidden="true"></div>
-  <header class="site-header">
-    <a class="wordmark" href="#home" aria-label="Origin home"><span class="mark">O</span><span>ORIGIN<small>HISTORY, HUMANITY, AND US</small></span></a>
-    <nav class="main-nav" aria-label="Main navigation">
-      <a class="nav-link active" href="#stories">The archive</a>
-      <a class="nav-link" href="#timeline">Timeline</a>
-      <a class="nav-link" href="#about">About Origin</a>
-    </nav>
-    <a class="header-note" href="#stories"><span class="live-dot"></span> A small archive of big beginnings</a>
-  </header>
 
-  <main id="home">
-    <section class="hero wrap" aria-labelledby="hero-title">
-      <div class="hero-copy">
-        <p class="eyebrow"><span class="eyebrow-line"></span> THE HUMAN STORY, IN TEN CHAPTERS</p>
-        <h1 id="hero-title">Every world<br>begins <em>somewhere.</em></h1>
-        <p class="hero-intro">A thoughtful little archive of the ideas, inventions and turning points that changed how we live. Follow a thread through time, and see how the past is still with us.</p>
-        <a class="explore-link" href="#stories">Wander through the archive <span aria-hidden="true">↓</span></a>
-      </div>
-      <aside class="hero-feature" aria-label="Featured story: the first cities">
-        <div class="feature-art" aria-hidden="true">
-          <div class="sun-disc"></div><div class="feature-land land-back"></div><div class="feature-land land-front"></div>
-          <span class="art-label label-one">TIGRIS</span><span class="art-label label-two">EUPHRATES</span>
-          <div class="ziggurat"><i></i><i></i><i></i><i></i><b></b></div>
-          <span class="art-caption">MESOPOTAMIA · C. 3500 BCE</span>
-        </div>
-        <div class="feature-info"><div><p class="eyebrow">A BEGINNING WORTH REMEMBERING</p><h2>When the first cities<br>learned to remember</h2></div><span class="feature-arrow" aria-hidden="true">↗</span></div>
-      </aside>
-      <div class="hero-index" aria-hidden="true"><span>01</span><span class="index-rule"></span><span>10</span></div>
-    </section>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">🌌 Origin of Things</div>
+        <p class="tagline">Discover how everything began...</p>
+    </header>
 
-    <section class="archive-section" id="stories">
-      <div class="wrap">
-        <div class="section-heading"><div><p class="eyebrow">THE ARCHIVE</p><h2>Ten stories. <em>One long thread.</em></h2></div><p class="section-aside">Start anywhere. History has a way<br>of connecting the dots.</p></div>
-        <div class="archive-tools">
-          <div class="category-nav" role="group" aria-label="Filter articles by category">
-            <button class="filter-chip selected" data-category="all" aria-pressed="true">Everything <span>10</span></button>
-            <button class="filter-chip" data-category="civilizations" aria-pressed="false">Civilizations</button>
-            <button class="filter-chip" data-category="ideas" aria-pressed="false">Ideas &amp; belief</button>
-            <button class="filter-chip" data-category="inventions" aria-pressed="false">Inventions</button>
-            <button class="filter-chip" data-category="turning-points" aria-pressed="false">Turning points</button>
-          </div>
-          <label class="search-box"><span class="search-icon" aria-hidden="true">⌕</span><span class="sr-only">Search the archive</span><input id="search" type="search" placeholder="Find a story…" autocomplete="off"><kbd>⌘ K</kbd></label>
-        </div>
-        <p class="result-count" id="result-count" aria-live="polite">Showing all 10 stories</p>
+    <!-- Main Content (Wikipedia style but fun) -->
+    <main>
+        <section class="intro">
+            <h2>Welcome to the Journey of Existence</h2>
+            <p>From the vastness of the universe to the screen you are looking at right now, everything has a beginning. Let's explore!</p>
+        </section>
 
-        <div class="article-grid" id="article-grid">
-          <article class="article-card" data-category="civilizations" data-era="ancient" data-search="first cities mesopotamia sumer writing uruk civilization">
-            <a class="card-link" href="#story-cities" aria-label="Read about the first cities">
-              <div class="card-art art-city"><span class="art-number">01</span><div class="city-sun"></div><div class="city-stack"><i></i><i></i><i></i><b></b></div><span class="art-stamp">C. 3500 BCE</span></div>
-              <div class="card-meta"><span class="category-label">CIVILIZATIONS</span><span>6 min read</span></div><h3 id="story-cities">The first cities</h3><p>In the fertile lands between two rivers, villages grew into places where strangers could build a life together.</p><span class="read-more">Explore the story <b>↗</b></span>
-            </a>
-          </article>
+        <!-- 10 Topics Grid -->
+        <section class="topics-grid">
+            <div class="card">
+                <h3>1. The Universe</h3>
+                <p>Born from the Big Bang 13.8 billion years ago, creating space, time, and matter.</p>
+            </div>
+            <div class="card">
+                <h3>2. The Earth</h3>
+                <p>Formed 4.5 billion years ago from a cloud of dust and gas around the young Sun.</p>
+            </div>
+            <div class="card">
+                <h3>3. Water</h3>
+                <p>Brought to Earth by icy comets and asteroids during the Late Heavy Bombardment.</p>
+            </div>
+            <div class="card">
+                <h3>4. Life</h3>
+                <p>Began in the deep oceans around hydrothermal vents nearly 3.5 billion years ago.</p>
+            </div>
+            <div class="card">
+                <h3>5. Dinosaurs</h3>
+                <p>Ruled the Earth for 165 million years before a massive asteroid hit.</p>
+            </div>
+            <div class="card">
+                <h3>6. Humanity</h3>
+                <p>Homo sapiens evolved in Africa about 300,000 years ago and spread across the globe.</p>
+            </div>
+            <div class="card">
+                <h3>7. Fire</h3>
+                <p>First controlled by our early ancestors around 1 million years ago, changing our diet and survival.</p>
+            </div>
+            <div class="card">
+                <h3>8. The Wheel</h3>
+                <p>Invented around 3500 BC in Mesopotamia, originally used for making pottery, not transportation!</p>
+            </div>
+            <div class="card">
+                <h3>9. Electricity</h3>
+                <p>Discovered over centuries, but harnessed for human use in the late 19th century.</p>
+            </div>
+            <div class="card">
+                <h3>10. The Internet</h3>
+                <p>Created in the 1960s as ARPANET, connecting humanity in ways never imagined before.</p>
+            </div>
+        </section>
 
-          <article class="article-card" data-category="ideas" data-era="ancient" data-search="silk road exchange ideas trade buddhism cultures china rome">
-            <a class="card-link" href="#story-silk" aria-label="Read about the Silk Road">
-              <div class="card-art art-silk"><span class="art-number">02</span><div class="silk-moon"></div><div class="silk-dune dune-a"></div><div class="silk-dune dune-b"></div><div class="camel camel-one">♞</div><span class="art-stamp">2ND C. BCE</span></div>
-              <div class="card-meta"><span class="category-label">IDEAS &amp; BELIEF</span><span>7 min read</span></div><h3 id="story-silk">The Silk Road</h3><p>More than a trade route: a web of encounters that carried faith, stories and new ways of seeing.</p><span class="read-more">Explore the story <b>↗</b></span>
-            </a>
-          </article>
+        <!-- Knowledge Quiz Section -->
+        <section class="quiz-section">
+            <h2>🧠 Fun Knowledge Quiz</h2>
+            <div class="quiz-box">
+                <p id="question">What was the original use of the wheel?</p>
+                <div class="options">
+                    <button class="quiz-btn" onclick="checkAnswer(this, 'wrong')">Chariots</button>
+                    <button class="quiz-btn" onclick="checkAnswer(this, 'correct')">Making Pottery</button>
+                    <button class="quiz-btn" onclick="checkAnswer(this, 'wrong')">Grinding Grain</button>
+                    <button class="quiz-btn" onclick="checkAnswer(this, 'wrong')">Toys</button>
+                </div>
+                <p id="quiz-result"></p>
+            </div>
+        </section>
+    </main>
 
-          <article class="article-card" data-category="ideas" data-era="ancient" data-search="paper invention china cai lun knowledge books communication han dynasty">
-            <a class="card-link" href="#story-paper" aria-label="Read about the invention of paper">
-              <div class="card-art art-paper"><span class="art-number">03</span><div class="paper-sheet sheet-back"></div><div class="paper-sheet sheet-front"><span>知</span><i></i><i></i><i></i></div><span class="art-stamp">C. 105 CE</span></div>
-              <div class="card-meta"><span class="category-label">IDEAS &amp; BELIEF</span><span>5 min read</span></div><h3 id="story-paper">A lighter way to carry ideas</h3><p>Paper made knowledge easier to keep, copy and share—and changed who could take part.</p><span class="read-more">Explore the story <b>↗</b></span>
-            </a>
-          </article>
+    <footer>
+        <p>Created with ❤️ for GitHub | Origin of Things © 2026</p>
+    </footer>
 
-          <article class="article-card" data-category="civilizations" data-era="medieval" data-search="timbuktu mali manuscripts university sankore africa learning mansa musa">
-            <a class="card-link" href="#story-timbuktu" aria-label="Read about Timbuktu's libraries">
-              <div class="card-art art-timbuktu"><span class="art-number">04</span><div class="timbuktu-sun"></div><div class="mosque"><i></i><i></i><b></b><em></em></div><span class="art-stamp">14TH–16TH C.</span></div>
-              <div class="card-meta"><span class="category-label">CIVILIZATIONS</span><span>6 min read</span></div><h3 id="story-timbuktu">The libraries of Timbuktu</h3><p>Across the Sahara, scholars gathered books and ideas in a city that became a beacon of learning.</p><span class="read-more">Explore the story <b>↗</b></span>
-            </a>
-          </article>
-
-          <article class="article-card" data-category="inventions" data-era="medieval" data-search="printing press gutenberg books movable type revolution knowledge europe">
-            <a class="card-link" href="#story-print" aria-label="Read about the printing press">
-              <div class="card-art art-print"><span class="art-number">05</span><div class="press-top"></div><div class="press-pillar left"></div><div class="press-pillar right"></div><div class="press-bed"></div><div class="press-book">A</div><span class="art-stamp">C. 1450 CE</span></div>
-              <div class="card-meta"><span class="category-label">INVENTIONS</span><span>7 min read</span></div><h3 id="story-print">The page that multiplied</h3><p>Movable type turned a painstaking craft into a force that could carry ideas across a continent.</p><span class="read-more">Explore the story <b>↗</b></span>
-            </a>
-          </article>
-
-          <article class="article-card" data-category="turning-points" data-era="early-modern" data-search="navigation ocean voyages maps global connections exchange age exploration polynesian">
-            <a class="card-link" href="#story-oceans" aria-label="Read about the age of ocean crossings">
-              <div class="card-art art-ocean"><span class="art-number">06</span><div class="ocean-sun"></div><div class="wave wave-one"></div><div class="wave wave-two"></div><div class="sailboat"><i></i><b></b></div><span class="art-stamp">15TH C. ONWARD</span></div>
-              <div class="card-meta"><span class="category-label">TURNING POINTS</span><span>8 min read</span></div><h3 id="story-oceans">When oceans became pathways</h3><p>Navigation connected distant shores, opening new encounters and reshaping lives on every coast.</p><span class="read-more">Explore the story <b>↗</b></span>
-            </a>
-          </article>
-
-          <article class="article-card" data-category="ideas" data-era="early-modern" data-search="scientific revolution observation astronomy telescope galileo evidence inquiry">
-            <a class="card-link" href="#story-science" aria-label="Read about the scientific revolution">
-              <div class="card-art art-science"><span class="art-number">07</span><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="planet"></div><div class="star star-a">✦</div><div class="star star-b">✧</div><span class="art-stamp">16TH–17TH C.</span></div>
-              <div class="card-meta"><span class="category-label">IDEAS &amp; BELIEF</span><span>6 min read</span></div><h3 id="story-science">Learning to look again</h3><p>New instruments and old questions helped people test what they thought they knew about the sky.</p><span class="read-more">Explore the story <b>↗</b></span>
-            </a>
-          </article>
-
-          <article class="article-card" data-category="inventions" data-era="industrial" data-search="industrial revolution steam engine factories labor cities textile machines industry">
-            <a class="card-link" href="#story-steam" aria-label="Read about the age of steam">
-              <div class="card-art art-steam"><span class="art-number">08</span><div class="factory factory-a"><i></i><i></i><b></b></div><div class="factory factory-b"><i></i><b></b></div><div class="smoke smoke-a"></div><div class="smoke smoke-b"></div><span class="art-stamp">C. 1760 ONWARD</span></div>
-              <div class="card-meta"><span class="category-label">INVENTIONS</span><span>8 min read</span></div><h3 id="story-steam">The age of steam</h3><p>Machines moved from workshops to factories, transforming work, cities and the rhythm of daily life.</p><span class="read-more">Explore the story <b>↗</b></span>
-            </a>
-          </article>
-
-          <article class="article-card" data-category="turning-points" data-era="modern" data-search="independence india 1947 partition freedom movement history people empire">
-            <a class="card-link" href="#story-independence" aria-label="Read about India's independence">
-              <div class="card-art art-india"><span class="art-number">09</span><div class="india-sun"></div><div class="flag flag-saffron"></div><div class="flag flag-white"><i></i></div><div class="flag flag-green"></div><div class="flag-pole"></div><span class="art-stamp">1947 CE</span></div>
-              <div class="card-meta"><span class="category-label">TURNING POINTS</span><span>9 min read</span></div><h3 id="story-independence">A freedom imagined together</h3><p>India’s independence was shaped by many voices, long movements and an immense human cost.</p><span class="read-more">Explore the story <b>↗</b></span>
-            </a>
-          </article>
-
-          <article class="article-card" data-category="inventions" data-era="modern" data-search="space age apollo 11 moon landing 1969 earth photograph satellite exploration">
-            <a class="card-link" href="#story-space" aria-label="Read about humanity's first steps on the Moon">
-              <div class="card-art art-space"><span class="art-number">10</span><div class="space-moon"></div><div class="earth"></div><div class="space-star one">✦</div><div class="space-star two">✧</div><div class="space-star three">·</div><span class="art-stamp">1969 CE</span></div>
-              <div class="card-meta"><span class="category-label">INVENTIONS</span><span>6 min read</span></div><h3 id="story-space">A small step, a wider view</h3><p>Walking on the Moon became a shared human milestone—and gave us a new picture of home.</p><span class="read-more">Explore the story <b>↗</b></span>
-            </a>
-          </article>
-        </div>
-
-        <div class="empty-state" id="empty-state" hidden><span>⌕</span><h3>No stories found</h3><p>Try another word or choose a different category.</p><button id="clear-search">Clear filters</button></div>
-      </div>
-    </section>
-
-    <section class="timeline-section" id="timeline">
-      <div class="wrap"><div class="timeline-heading"><div><p class="eyebrow">A THREAD THROUGH TIME</p><h2>History, at a glance.</h2></div><p>Choose a moment to explore the stories<br>that belong to its era.</p></div>
-        <div class="timeline" role="group" aria-label="Filter stories by era">
-          <div class="timeline-line" aria-hidden="true"></div>
-          <button class="era-point selected" data-era="all" aria-pressed="true"><span class="era-dot"></span><strong>All time</strong><small>10 stories</small></button>
-          <button class="era-point" data-era="ancient" aria-pressed="false"><span class="era-dot"></span><strong>Ancient</strong><small>3500 BCE – 500 CE</small></button>
-          <button class="era-point" data-era="medieval" aria-pressed="false"><span class="era-dot"></span><strong>Medieval</strong><small>500 – 1500</small></button>
-          <button class="era-point" data-era="early-modern" aria-pressed="false"><span class="era-dot"></span><strong>Early modern</strong><small>1500 – 1750</small></button>
-          <button class="era-point" data-era="industrial" aria-pressed="false"><span class="era-dot"></span><strong>Industrial</strong><small>1750 – 1900</small></button>
-          <button class="era-point" data-era="modern" aria-pressed="false"><span class="era-dot"></span><strong>Modern</strong><small>1900 – today</small></button>
-        </div>
-      </div>
-    </section>
-
-    <section class="about-section" id="about">
-      <div class="wrap about-inner">
-        <span class="about-mark">O</span>
-        <div><p class="eyebrow">ABOUT ORIGIN</p><h2>The past is not far away.</h2><p>Origin is a small, independent doorway into history. Each story is a starting point: a way to notice how people, places and ideas are connected across time. Stay curious, and keep following the thread.</p></div>
-        <a href="#home" class="back-top">Back to the beginning <span>↑</span></a>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="wrap footer-inner">
-      <a class="footer-brand" href="#home">ORIGIN<span> · A LIVING HISTORY ARCHIVE</span></a>
-      <span>Made for the curious. © 2026 Origin</span>
-      <a href="#home">Return to top ↑</a>
-    </div>
-  </footer>
-
-  <script>
-    (() => {
-      const cards = [...document.querySelectorAll('.article-card')];
-      const categoryButtons = [...document.querySelectorAll('.filter-chip')];
-      const eraButtons = [...document.querySelectorAll('.era-point')];
-      const search = document.querySelector('#search');
-      const count = document.querySelector('#result-count');
-      const empty = document.querySelector('#empty-state');
-      let category = 'all';
-      let era = 'all';
-
-      const update = () => {
-        const term = search.value.trim().toLocaleLowerCase();
-        let shown = 0;
-
-        cards.forEach(card => {
-          const matchesCategory = category === 'all' || card.dataset.category === category;
-          const matchesEra = era === 'all' || card.dataset.era === era;
-          const matchesSearch = !term || (card.dataset.search + ' ' + card.innerText).toLocaleLowerCase().includes(term);
-          const visible = matchesCategory && matchesEra && matchesSearch;
-
-          card.hidden = !visible;
-          if (visible) shown++;
-        });
-
-        count.textContent = shown === 10 && !term && category === 'all' && era === 'all'
-          ? 'Showing all 10 stories'
-          : `Showing ${shown} ${shown === 1 ? 'story' : 'stories'}`;
-
-        empty.hidden = shown !== 0;
-      };
-
-      categoryButtons.forEach(button => button.addEventListener('click', () => {
-        category = button.dataset.category;
-        categoryButtons.forEach(item => {
-          const active = item === button;
-          item.classList.toggle('selected', active);
-          item.setAttribute('aria-pressed', active);
-        });
-        update();
-      }));
-
-      eraButtons.forEach(button => button.addEventListener('click', () => {
-        era = button.dataset.era;
-        eraButtons.forEach(item => {
-          const active = item === button;
-          item.classList.toggle('selected', active);
-          item.setAttribute('aria-pressed', active);
-        });
-        update();
-        if (era !== 'all') document.querySelector('#stories').scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }));
-
-      search.addEventListener('input', update);
-
-      document.querySelector('#clear-search').addEventListener('click', () => {
-        search.value = '';
-        category = 'all';
-        era = 'all';
-
-        categoryButtons.forEach(button => {
-          const active = button.dataset.category === 'all';
-          button.classList.toggle('selected', active);
-          button.setAttribute('aria-pressed', active);
-        });
-
-        eraButtons.forEach(button => {
-          const active = button.dataset.era === 'all';
-          button.classList.toggle('selected', active);
-          button.setAttribute('aria-pressed', active);
-        });
-
-        update();
-        search.focus();
-      });
-
-      document.addEventListener('keydown', event => {
-        if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === 'k') {
-          event.preventDefault();
-          search.focus();
-        }
-        if (event.key === 'Escape' && document.activeElement === search) {
-          search.value = '';
-          update();
-          search.blur();
-        }
-      });
-
-      const finePointer = matchMedia('(hover: hover) and (pointer: fine)');
-      const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
-
-      if (finePointer.matches && !reducedMotion.matches) {
-        const glow = document.querySelector('.ambient-glow');
-        let frame = 0;
-
-        window.addEventListener('pointermove', event => {
-          if (frame) return;
-
-          frame = requestAnimationFrame(() => {
-            document.documentElement.style.setProperty('--pointer-x', `${event.clientX}px`);
-            document.documentElement.style.setProperty('--pointer-y', `${event.clientY}px`);
-            glow.classList.add('is-visible');
-            frame = 0;
-          });
-        }, { passive: true });
-
-        window.addEventListener('pointerleave', () => glow.classList.remove('is-visible'), { passive: true });
-
-        cards.forEach(card => {
-          card.addEventListener('pointermove', event => {
-            const rect = card.getBoundingClientRect();
-            const x = (event.clientX - rect.left) / rect.width;
-            const y = (event.clientY - rect.top) / rect.height;
-
-            card.style.setProperty('--tilt-x', `${(0.5 - y) * 2.8}deg`);
-            card.style.setProperty('--tilt-y', `${(x - 0.5) * 3.5}deg`);
-            card.style.setProperty('--lift-x', `${(x - 0.5) * 3}px`);
-            card.style.setProperty('--lift-y', `${(y - 0.5) * 3}px`);
-          }, { passive: true });
-
-          card.addEventListener('pointerleave', () => {
-            card.style.setProperty('--tilt-x', '0deg');
-            card.style.setProperty('--tilt-y', '0deg');
-            card.style.setProperty('--lift-x', '0px');
-            card.style.setProperty('--lift-y', '0px');
-          }, { passive: true });
-        });
-      }
-    })();
-  </script>
+    <script src="script.js"></script>
 </body>
 </html>
