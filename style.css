@@ -1,15 +1,15 @@
-/* Color Palette & Variables for Cozy Night Mode */
+/* Custom CSS Variables for Cozy Night Mode */
 :root {
-    --bg-dark: #0f172a; /* Deep night sky blue */
-    --card-bg: #1e293b; /* Slightly lighter blue for cards */
+    --bg-dark: #0f172a;
+    --card-bg: #1e293b;
     --text-main: #f8fafc;
     --text-muted: #94a3b8;
-    --accent-glow: #38bdf8; /* Bright Cyan */
-    --accent-warm: #fbbf24; /* Warm Star Yellow */
-    --accent-pink: #ec4899; /* Bright Pink for buttons */
+    --accent-glow: #38bdf8;
+    --accent-warm: #fbbf24;
+    --accent-pink: #ec4899;
 }
 
-/* General Reset & Typography */
+/* Basic Resets */
 * {
     margin: 0;
     padding: 0;
@@ -21,14 +21,14 @@ body {
     color: var(--text-main);
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
-    overflow-x: hidden;
+    overflow-x: hidden; /* Prevents horizontal scroll */
 }
 
 h1, h2, h3 {
     font-family: 'Quicksand', sans-serif;
 }
 
-/* Header Styles */
+/* Header */
 header {
     text-align: center;
     padding: 3rem 1rem;
@@ -51,13 +51,14 @@ header {
     letter-spacing: 1px;
 }
 
-/* Main Content */
+/* Main Container */
 main {
     max-width: 1200px;
     margin: 0 auto;
     padding: 2rem;
 }
 
+/* Intro Section */
 .intro {
     text-align: center;
     margin-bottom: 3rem;
@@ -76,7 +77,7 @@ main {
     margin: 0 auto;
 }
 
-/* Grid Layout for Topics */
+/* Topics Grid */
 .topics-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -84,7 +85,7 @@ main {
     margin-bottom: 4rem;
 }
 
-/* Card Effects */
+/* Cards */
 .card {
     background-color: var(--card-bg);
     padding: 1.5rem;
@@ -97,18 +98,23 @@ main {
 }
 
 .card:hover {
-    transform: translateY(-10px) scale(1.02);
+    transform: translateY(-10px);
     box-shadow: 0 10px 30px rgba(56, 189, 248, 0.15);
     border-color: var(--accent-glow);
 }
 
+/* Glowing Left Border on Hover */
 .card::before {
     content: '';
     position: absolute;
-    top: 0; left: 0; width: 4px; height: 100%;
+    top: 0; 
+    left: 0; 
+    width: 4px; 
+    height: 100%;
     background: var(--accent-glow);
     transform: scaleY(0);
     transition: transform 0.4s ease;
+    transform-origin: top;
 }
 
 .card:hover::before {
@@ -116,4 +122,91 @@ main {
 }
 
 .card h3 {
-    color
+    color: var(--accent-warm);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.card p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+/* Quiz Section */
+.quiz-section {
+    background: linear-gradient(135deg, var(--card-bg) 0%, #2e1065 100%);
+    padding: 3rem;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 0 40px rgba(236, 72, 153, 0.1);
+}
+
+.quiz-section h2 {
+    color: var(--accent-pink);
+    margin-bottom: 2rem;
+    font-size: 2.2rem;
+}
+
+.quiz-box {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#question {
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+/* Quiz Buttons */
+.quiz-btn {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    padding: 1rem;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.quiz-btn:hover {
+    background-color: var(--accent-pink);
+    border-color: var(--accent-pink);
+}
+
+#quiz-result {
+    margin-top: 1.5rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    min-height: 25px; /* Keeps layout stable before answer is clicked */
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--card-bg);
+    margin-top: 2rem;
+}
+
+/* Animation Keyframes */
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Rules */
+@media (max-width: 600px) {
+    .options { grid-template-columns: 1fr; }
+    .logo { font-size: 2.2rem; }
+    .quiz-section { padding: 1.5rem; }
+}
