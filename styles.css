@@ -1,0 +1,761 @@
+/* =========================
+   BASIC RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #0d0d0f;
+    color: #f1ede7;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   COLORS
+========================= */
+
+:root {
+
+    --background: #0d0d0f;
+
+    --surface: #151517;
+
+    --surface-light: #1d1d20;
+
+    --red: #c62828;
+
+    --red-light: #e05252;
+
+    --white: #f1ede7;
+
+    --grey: #aaa5a0;
+
+    --border: #29292d;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+
+    height: 75px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 8%;
+
+    border-bottom: 1px solid var(--border);
+
+    background: rgba(13, 13, 15, 0.95);
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 100;
+}
+
+
+.logo {
+
+    font-size: 21px;
+
+    font-weight: bold;
+
+    letter-spacing: 5px;
+}
+
+
+.logo span {
+
+    color: var(--red);
+
+}
+
+
+nav {
+
+    display: flex;
+
+    gap: 35px;
+
+}
+
+
+nav a {
+
+    color: var(--grey);
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    transition: 0.3s;
+
+}
+
+
+nav a:hover {
+
+    color: var(--white);
+
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+
+    min-height: 650px;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 100px 10%;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+.hero::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+
+    height: 500px;
+
+    background: rgba(198, 40, 40, 0.12);
+
+    border-radius: 50%;
+
+    filter: blur(100px);
+
+    right: -150px;
+
+    top: 100px;
+
+}
+
+
+.hero-content {
+
+    max-width: 850px;
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+
+.small-title,
+.section-label {
+
+    color: var(--red-light);
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 18px;
+}
+
+
+.hero h1 {
+
+    font-family: Georgia, serif;
+
+    font-size: clamp(55px, 8vw, 100px);
+
+    line-height: 0.98;
+
+    font-weight: normal;
+
+    margin-bottom: 30px;
+}
+
+
+.hero h1 span,
+h2 span {
+
+    color: var(--red-light);
+
+}
+
+
+.hero-text {
+
+    max-width: 650px;
+
+    color: var(--grey);
+
+    font-size: 18px;
+
+    margin-bottom: 40px;
+}
+
+
+.explore-button {
+
+    display: inline-block;
+
+    padding: 14px 24px;
+
+    background: var(--red);
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 10px;
+
+    transition: 0.3s;
+
+}
+
+
+.explore-button:hover {
+
+    background: var(--red-light);
+
+    transform: translateY(-3px);
+
+}
+
+
+.hero-line {
+
+    position: absolute;
+
+    height: 1px;
+
+    width: 35%;
+
+    background: var(--red);
+
+    right: 0;
+
+    bottom: 100px;
+
+}
+
+
+/* =========================
+   INTRO
+========================= */
+
+.intro {
+
+    border-top: 1px solid var(--border);
+
+    border-bottom: 1px solid var(--border);
+
+    padding: 90px 10%;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 80px;
+}
+
+
+h2 {
+
+    font-family: Georgia, serif;
+
+    font-size: clamp(38px, 5vw, 60px);
+
+    font-weight: normal;
+
+    line-height: 1.1;
+}
+
+
+.intro > p {
+
+    color: var(--grey);
+
+    font-size: 18px;
+
+    max-width: 550px;
+
+}
+
+
+/* =========================
+   TOPICS
+========================= */
+
+.topics {
+
+    padding: 120px 10%;
+}
+
+
+.section-heading {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: end;
+
+    margin-bottom: 70px;
+
+    gap: 30px;
+}
+
+
+.section-heading > p {
+
+    color: var(--grey);
+
+}
+
+
+.history-section {
+
+    display: grid;
+
+    grid-template-columns: 100px 1fr;
+
+    gap: 40px;
+
+    padding: 45px 0;
+
+    border-top: 1px solid var(--border);
+
+    transition: 0.3s;
+}
+
+
+.history-section:hover {
+
+    padding-left: 15px;
+
+}
+
+
+.topic-number {
+
+    color: #55555a;
+
+    font-family: Georgia, serif;
+
+    font-size: 20px;
+}
+
+
+.topic-info {
+
+    max-width: 900px;
+}
+
+
+.topic-icon {
+
+    width: 48px;
+
+    height: 48px;
+
+    border-radius: 14px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #211416;
+
+    border: 1px solid #442124;
+
+    color: var(--red-light);
+
+    margin-bottom: 20px;
+
+    font-size: 20px;
+}
+
+
+.topic-info h3 {
+
+    font-family: Georgia, serif;
+
+    font-size: 35px;
+
+    font-weight: normal;
+
+    margin-bottom: 12px;
+}
+
+
+.topic-info > p {
+
+    color: var(--grey);
+
+    max-width: 650px;
+
+    margin-bottom: 25px;
+}
+
+
+.story-links {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+}
+
+
+.story-links a {
+
+    color: #ddd8d2;
+
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+
+    text-decoration: none;
+
+    padding: 9px 14px;
+
+    border-radius: 8px;
+
+    font-size: 13px;
+
+    transition: 0.3s;
+}
+
+
+.story-links a span {
+
+    color: var(--red-light);
+
+    margin-left: 8px;
+
+}
+
+
+.story-links a:hover {
+
+    border-color: var(--red);
+
+    background: #201517;
+
+}
+
+
+/* =========================
+   TIMELINE
+========================= */
+
+.timeline {
+
+    background: #111113;
+
+    border-top: 1px solid var(--border);
+
+    border-bottom: 1px solid var(--border);
+
+    padding: 110px 10%;
+}
+
+
+.timeline h2 {
+
+    margin-bottom: 70px;
+}
+
+
+.timeline-line {
+
+    display: grid;
+
+    grid-template-columns: repeat(5, 1fr);
+
+    border-top: 1px solid #3b3b40;
+
+}
+
+
+.timeline-item {
+
+    padding: 30px 20px 0 0;
+
+    border-right: 1px solid var(--border);
+
+}
+
+
+.timeline-item strong {
+
+    color: var(--red-light);
+
+    font-size: 20px;
+
+}
+
+
+.timeline-item p {
+
+    color: var(--grey);
+
+    font-size: 14px;
+
+    margin-top: 8px;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about {
+
+    padding: 140px 10%;
+
+    max-width: 1100px;
+}
+
+
+.about h2 {
+
+    margin-bottom: 30px;
+}
+
+
+.about > p:last-child {
+
+    max-width: 600px;
+
+    color: var(--grey);
+
+    font-size: 17px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+
+    border-top: 1px solid var(--border);
+
+    padding: 50px 10%;
+
+    color: var(--grey);
+}
+
+
+.footer-logo {
+
+    color: var(--white);
+
+    letter-spacing: 5px;
+
+    font-weight: bold;
+
+    margin-bottom: 10px;
+}
+
+
+.copyright {
+
+    margin-top: 30px;
+
+    font-size: 12px;
+
+    color: #66666b;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 800px) {
+
+    .navbar {
+
+        padding: 0 6%;
+
+    }
+
+    nav {
+
+        gap: 15px;
+
+    }
+
+    nav a {
+
+        font-size: 12px;
+
+    }
+
+
+    .hero {
+
+        padding: 80px 7%;
+
+        min-height: 600px;
+
+    }
+
+
+    .intro {
+
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+
+        padding: 70px 7%;
+
+    }
+
+
+    .topics {
+
+        padding: 80px 7%;
+
+    }
+
+
+    .section-heading {
+
+        display: block;
+
+    }
+
+
+    .section-heading > p {
+
+        margin-top: 20px;
+
+    }
+
+
+    .history-section {
+
+        grid-template-columns: 45px 1fr;
+
+        gap: 15px;
+
+    }
+
+
+    .topic-info h3 {
+
+        font-size: 28px;
+
+    }
+
+
+    .timeline {
+
+        padding: 80px 7%;
+
+    }
+
+
+    .timeline-line {
+
+        grid-template-columns: 1fr;
+
+        border-top: none;
+
+    }
+
+
+    .timeline-item {
+
+        border-right: none;
+
+        border-left: 1px solid var(--red);
+
+        padding: 20px;
+
+    }
+
+
+    .about {
+
+        padding: 90px 7%;
+
+    }
+
+}
+
+
+/* =========================
+   SMALL PHONES
+========================= */
+
+@media (max-width: 500px) {
+
+    nav {
+
+        display: none;
+
+    }
+
+
+    .hero h1 {
+
+        font-size: 55px;
+
+    }
+
+
+    .hero-text {
+
+        font-size: 16px;
+
+    }
+
+
+    .history-section {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .topic-number {
+
+        margin-bottom: -10px;
+
+    }
+
+}
