@@ -41,9 +41,9 @@ h1, h2, h3 {
 }
 
 /* ==========================================================================
-   METEOR SHOWER CANVAS
+   PURE CSS FALLING SHOOTING STARS (Zero JS Background)
    ========================================================================== */
-#meteor-canvas {
+.star-shower {
     position: fixed;
     top: 0;
     left: 0;
@@ -51,6 +51,33 @@ h1, h2, h3 {
     height: 100%;
     pointer-events: none;
     z-index: 0;
+    overflow: hidden;
+}
+
+.star {
+    position: absolute;
+    width: 2px;
+    height: 48px;
+    background: linear-gradient(to top, var(--neon-cyan), transparent);
+    opacity: 0;
+    border-radius: 999px;
+    animation: meteor-fall linear infinite;
+}
+
+.star:nth-child(1) { left: 10%; animation-duration: 4s; animation-delay: 0s; }
+.star:nth-child(2) { left: 25%; animation-duration: 6s; animation-delay: 1.5s; height: 65px; background: linear-gradient(to top, var(--neon-amber), transparent); }
+.star:nth-child(3) { left: 45%; animation-duration: 5s; animation-delay: 2.8s; }
+.star:nth-child(4) { left: 60%; animation-duration: 6.5s; animation-delay: 0.8s; height: 50px; }
+.star:nth-child(5) { left: 75%; animation-duration: 4.8s; animation-delay: 3.2s; background: linear-gradient(to top, var(--neon-pink), transparent); }
+.star:nth-child(6) { left: 88%; animation-duration: 5.5s; animation-delay: 1.8s; }
+.star:nth-child(7) { left: 35%; animation-duration: 6.2s; animation-delay: 4.2s; }
+.star:nth-child(8) { left: 95%; animation-duration: 5.2s; animation-delay: 2.2s; }
+
+@keyframes meteor-fall {
+    0% { transform: translateY(-100px) rotate(22deg); opacity: 0; }
+    20% { opacity: 0.75; }
+    80% { opacity: 0.4; }
+    100% { transform: translateY(115vh) rotate(22deg); opacity: 0; }
 }
 
 /* ==========================================================================
@@ -64,7 +91,7 @@ h1, h2, h3 {
 
 .word-glow:hover {
     color: var(--neon-amber);
-    text-shadow: 0 0 10px rgba(251, 191, 36, 0.6), 0 0 20px rgba(251, 191, 36, 0.3);
+    text-shadow: 0 0 12px rgba(251, 191, 36, 0.7), 0 0 25px rgba(251, 191, 36, 0.35);
     transform: translateY(-2px);
 }
 
@@ -79,7 +106,7 @@ h1, h2, h3 {
     justify-content: space-between;
     align-items: center;
     padding: 1.2rem 3.5rem;
-    background: rgba(7, 10, 15, 0.82);
+    background: rgba(7, 10, 15, 0.85);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     border-bottom: 1px solid var(--border-dim);
@@ -112,7 +139,7 @@ h1, h2, h3 {
 
 .nav-links a:hover {
     color: var(--neon-cyan);
-    text-shadow: 0 0 8px rgba(56, 189, 248, 0.5);
+    text-shadow: 0 0 8px rgba(56, 189, 248, 0.6);
 }
 
 /* ==========================================================================
@@ -194,7 +221,7 @@ h1, h2, h3 {
 }
 
 /* ==========================================================================
-   ARTICLES & SPOTLIGHT BOUNDARY GLOW
+   20 ARTICLES WITH GLOWING BOUNDARIES
    ========================================================================== */
 .main-wrapper {
     position: relative;
@@ -238,7 +265,7 @@ h1, h2, h3 {
     gap: 1.8rem;
 }
 
-/* Boundary Spotlight Article Card */
+/* Boundary Glowing Article Card */
 .article-spotlight-card {
     position: relative;
     background: var(--card-surface);
@@ -248,41 +275,32 @@ h1, h2, h3 {
     flex-direction: column;
     justify-content: space-between;
     border: 1px solid var(--border-dim);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: all 0.35s ease;
     overflow: hidden;
 }
 
-/* Dynamic Radial Border Glow following the cursor */
+/* Radiant Boundary Accent on Hover */
 .article-spotlight-card::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
-    border-radius: 16px;
-    padding: 2px;
-    background: radial-gradient(
-        350px circle at var(--mouse-x, -500px) var(--mouse-y, -500px),
-        rgba(56, 189, 248, 0.7),
-        rgba(251, 191, 36, 0.3) 40%,
-        transparent 80%
-    );
-    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    -webkit-mask-composite: xor;
-    mask-composite: exclude;
-    pointer-events: none;
-    opacity: 0;
-    transition: opacity 0.4s ease;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--neon-cyan), var(--neon-amber));
+    opacity: 0.4;
+    transition: opacity 0.3s ease;
 }
 
 .article-spotlight-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.6), 0 0 20px rgba(56, 189, 248, 0.15);
+    transform: translateY(-7px);
+    border-color: var(--neon-cyan);
+    box-shadow: 0 14px 35px rgba(0, 0, 0, 0.6), 0 0 20px rgba(56, 189, 248, 0.25);
 }
 
 .article-spotlight-card:hover::before {
     opacity: 1;
+    box-shadow: 0 0 12px var(--neon-cyan);
 }
 
 .card-category {
@@ -304,6 +322,12 @@ h1, h2, h3 {
 .article-spotlight-card h3 {
     font-size: 1.4rem;
     margin-bottom: 0.85rem;
+    transition: color 0.3s ease;
+}
+
+.article-spotlight-card:hover h3 {
+    color: var(--neon-amber);
+    text-shadow: 0 0 8px rgba(251, 191, 36, 0.5);
 }
 
 .article-desc {
@@ -324,14 +348,14 @@ h1, h2, h3 {
 }
 
 /* ==========================================================================
-   QUIZ COMPONENT
+   PURE CSS INTERACTIVE QUIZ
    ========================================================================== */
 .quiz-section {
     margin-bottom: 7rem;
 }
 
 .quiz-wrapper {
-    max-width: 800px;
+    max-width: 820px;
     margin: 0 auto;
     text-align: center;
 }
@@ -340,77 +364,80 @@ h1, h2, h3 {
     background: var(--card-surface);
     border: 1px solid var(--border-dim);
     border-radius: 20px;
-    padding: 2.5rem;
+    padding: 2.2rem;
     margin-top: 2rem;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
     text-align: left;
 }
 
-.quiz-meta {
-    display: flex;
-    justify-content: space-between;
-    font-size: 0.85rem;
+.quiz-q-title {
+    font-size: 1.35rem;
+    margin-bottom: 1.5rem;
     color: var(--neon-amber);
-    font-weight: 600;
-    margin-bottom: 1rem;
-    letter-spacing: 0.5px;
-}
-
-#quiz-q-title {
-    font-size: 1.5rem;
-    margin-bottom: 1.8rem;
-    color: var(--text-primary);
 }
 
 .quiz-options {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-direction: column;
     gap: 1rem;
-    margin-bottom: 1.5rem;
 }
 
 .quiz-option-btn {
+    display: block;
     background: rgba(7, 10, 15, 0.6);
     border: 1px solid var(--border-dim);
     padding: 1.1rem;
     border-radius: 12px;
     color: var(--text-primary);
-    font-family: inherit;
-    font-size: 0.95rem;
     cursor: pointer;
-    text-align: left;
     transition: all 0.25s ease;
 }
 
-.quiz-option-btn:hover:not(:disabled) {
+.quiz-option-btn input[type="radio"] {
+    display: none;
+}
+
+.quiz-option-btn span {
+    font-weight: 500;
+    display: block;
+}
+
+.quiz-option-btn:hover {
     border-color: var(--neon-cyan);
     background: rgba(56, 189, 248, 0.08);
-    transform: translateY(-2px);
 }
 
-.quiz-option-btn.correct {
-    background: rgba(16, 185, 129, 0.2) !important;
-    border-color: var(--neon-emerald) !important;
-    color: #a7f3d0 !important;
-    box-shadow: 0 0 15px rgba(16, 185, 129, 0.3);
-}
-
-.quiz-option-btn.wrong {
-    background: rgba(239, 68, 68, 0.2) !important;
-    border-color: #ef4444 !important;
-    color: #fca5a5 !important;
-    box-shadow: 0 0 15px rgba(239, 68, 68, 0.3);
-}
-
-.quiz-feedback {
-    font-size: 0.95rem;
-    min-height: 28px;
-    font-weight: 500;
-}
-
-.next-btn {
+/* Hidden Feedback by default */
+.answer-reveal {
     display: none;
-    margin: 1.2rem auto 0;
+    margin-top: 0.8rem;
+    padding-top: 0.8rem;
+    border-top: 1px dashed rgba(255, 255, 255, 0.15);
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+/* Pure CSS Reveal when selected */
+.quiz-option-btn.correct:has(input:checked) {
+    border-color: var(--neon-emerald) !important;
+    background: rgba(16, 185, 129, 0.18) !important;
+    box-shadow: 0 0 18px rgba(16, 185, 129, 0.3);
+}
+
+.quiz-option-btn.correct:has(input:checked) .answer-reveal {
+    display: block;
+    color: #6ee7b7;
+}
+
+.quiz-option-btn.wrong:has(input:checked) {
+    border-color: #ef4444 !important;
+    background: rgba(239, 68, 68, 0.18) !important;
+    box-shadow: 0 0 18px rgba(239, 68, 68, 0.3);
+}
+
+.quiz-option-btn.wrong:has(input:checked) .answer-reveal {
+    display: block;
+    color: #fca5a5;
 }
 
 /* ==========================================================================
@@ -477,9 +504,6 @@ footer {
         flex-direction: column;
     }
     .articles-grid {
-        grid-template-columns: 1fr;
-    }
-    .quiz-options {
         grid-template-columns: 1fr;
     }
 }
