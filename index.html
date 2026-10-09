@@ -3,270 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Origin of Things</title>
+    <title>Origin of Things | An Archive of Beginnings</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Super Cool Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- Falling Shooting Stars Animation (Pure CSS) -->
-    <div class="star-shower">
-        <span class="star"></span>
-        <span class="star"></span>
-        <span class="star"></span>
-        <span class="star"></span>
-        <span class="star"></span>
-        <span class="star"></span>
-        <span class="star"></span>
-        <span class="star"></span>
-    </div>
+    <!-- Dynamic Meteor Canvas Background -->
+    <canvas id="meteor-canvas"></canvas>
 
-    <!-- Cool Glassmorphism Navbar -->
+    <!-- Navigation Bar -->
     <nav class="navbar">
-        <div class="nav-logo">🌌 Origin of Things</div>
+        <div class="nav-brand">
+            <span class="brand-icon">🌌</span>
+            <span class="brand-name">Origin of Things</span>
+        </div>
         <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
+            <li><a href="#hero">Home</a></li>
             <li><a href="#articles">Articles</a></li>
-            <li><a href="#quiz">Quiz</a></li>
-            <li><a href="#about">About</a></li>
+            <li><a href="#quiz">Quiz Challenge</a></li>
+            <li><a href="#about">About Project</a></li>
         </ul>
     </nav>
 
-    <!-- Header / Hero Section -->
-    <header id="home" class="hero">
-        <div class="floating-logo">🌌 Origin of Things</div>
-        <p class="tagline">Discover How Everything in the Universe Began...</p>
-        <div class="hero-actions">
-            <a href="#articles" class="cool-btn btn-glow">Explore Articles 🚀</a>
-            <a href="#quiz" class="cool-btn btn-quiz">Take Origin Quiz 🧠</a>
+    <!-- Hero Header -->
+    <header id="hero" class="hero">
+        <div class="hero-pill">✨ The Chronicle of Curiosity</div>
+        <h1 class="hero-title" id="glow-hero-heading">Where Did Everything Around Us Truly Begin?</h1>
+        <p class="hero-description">
+            A midnight encyclopedia dedicated to uncovering the forgotten stories, astronomical collisions, and bizarre historical accidents that gifted humanity its greatest creations.
+        </p>
+        <div class="hero-ctas">
+            <a href="#articles" class="btn btn-glow">Begin Exploring</a>
+            <a href="#quiz" class="btn btn-outline">Test Origin Trivia</a>
         </div>
     </header>
 
-    <main>
-        <!-- Intro Section -->
-        <section class="intro">
-            <h2>Welcome to the Archive of Existence</h2>
-            <p>From the fiery dust of cosmic explosions to the tiny objects inside your pocket—everything has a bizarre, accidental, and fascinating beginning.</p>
-        </section>
-
-        <!-- 20 Cool Wikipedia-Style Origin Articles -->
+    <main class="main-wrapper">
+        <!-- 20 In-Depth Articles Section -->
         <section id="articles" class="articles-section">
-            <h2 class="section-title">✨ 20 Fascinating Origins</h2>
-            <div class="topics-grid">
+            <div class="section-heading">
+                <span class="sub-badge">CHRONICLES</span>
+                <h2 class="glow-title">Documented Origins</h2>
+                <p>Hover across any chronicle to illuminate its history.</p>
+            </div>
 
-                <div class="card">
-                    <span class="badge cosmos">COSMOS</span>
-                    <h3>1. Origin of Gold</h3>
-                    <p>All gold on Earth was not made here. It was forged when ancient dying neutron stars smashed into each other billions of years ago and showered our infant planet.</p>
-                    <div class="fact-tag">✨ A single neutron star spoon weighs billions of tons!</div>
-                </div>
-
-                <div class="card">
-                    <span class="badge nature">NATURE</span>
-                    <h3>2. Origin of Water</h3>
-                    <p>Water didn't form naturally on hot early Earth. Most scientists trace oceans to icy comets and chondrite asteroids colliding with Earth 3.9 billion years ago.</p>
-                    <div class="fact-tag">🌊 The water you drink is older than the sun!</div>
-                </div>
-
-                <div class="card">
-                    <span class="badge food">DISCOVERY</span>
-                    <h3>3. Origin of Coffee</h3>
-                    <p>An Ethiopian goat herder named Kaldi noticed his goats bouncing with endless energy after chewing bright red berries from a wild bush. Monks turned it into a dark brew.</p>
-                    <div class="fact-tag">☕ Early London coffeehouses were called 'Penny Universities'.</div>
-                </div>
-
-                <div class="card">
-                    <span class="badge society">CIVILIZATION</span>
-                    <h3>4. Origin of the Weekend</h3>
-                    <p>Humans used to work 7 days straight. In 1908, a US cotton mill gave Saturdays off to Jewish staff, and Henry Ford introduced the 40-hour 2-day weekend in 1926.</p>
-                    <div class="fact-tag">⏳ Ford proved well-rested workers produced far more cars.</div>
-                </div>
-
-                <div class="card">
-                    <span class="badge tech">TECH</span>
-                    <h3>5. Origin of Wi-Fi</h3>
-                    <p>Hollywood star Hedy Lamarr co-invented frequency-hopping spread spectrum in WWII for torpedoes. Decades later, scientists studying evaporating black holes turned it into Wi-Fi.</p>
-                    <div class="fact-tag">📡 Wi-Fi doesn't stand for anything; it's just a rhyming name!</div>
-                </div>
-
-                <div class="card">
-                    <span class="badge food">ACCIDENTAL</span>
-                    <h3>6. Origin of Matches</h3>
-                    <p>In 1826, chemist John Walker was stirring chemicals with a wooden stick. He tried scraping a dried lump off the stone hearth—and it burst into a handy friction flame!</p>
-                    <div class="fact-tag">🔥 Walker refused to patent it so fire remained free for all.</div>
-                </div>
-
-                <div class="card">
-                    <span class="badge society">CIVILIZATION</span>
-                    <h3>7. Origin of Money (Coins)</h3>
-                    <p>Standard metal coins were invented around 600 BC in Lydia (modern Turkey). Stamped with royal lion heads from electrum, they guaranteed exact trading value.</p>
-                    <div class="fact-tag">🪙 Paper currency came later in 7th century Tang Dynasty China.</div>
-                </div>
-
-                <div class="card">
-                    <span class="badge nature">NATURE</span>
-                    <h3>8. Origin of Trees</h3>
-                    <p>For 90% of Earth's timeline, trees didn't exist; giant 24-foot mushrooms ruled the land. Trees arrived 385 million years ago, dropping carbon and creating breathable air.</p>
-                    <div class="fact-tag">🌲 Sharks are actually older than trees and Saturn's rings!</div>
-                </div>
-
-                <div class="card">
-                    <span class="badge tech">CRAFT</span>
-                    <h3>9. Origin of the Mirror</h3>
-                    <p>After centuries of staring at polished black volcanic obsidian, true silvered glass mirrors were perfected in Venice, where artisans guarded the secret formula under death penalty.</p>
-                    <div class="fact-tag">🪞 A Venetian mirror was once worth more than a master painting.</div>
-                </div>
-
-                <div class="card">
-                    <span class="badge tech">TECH</span>
-                    <h3>10. Origin of Computer Mouse</h3>
-                    <p>Douglas Engelbart built the first mouse in 1964 from a hollowed wooden block with two metal wheels. He called it a 'mouse' because the tail-like wire came out the back.</p>
-                    <div class="fact-tag">🖱️ Engelbart never made royalties because the patent expired early.</div>
-                </div>
-
-                <div class="card">
-                    <span class="badge nature">MEDICINE</span>
-                    <h3>11. Origin of Penicillin</h3>
-                    <p>Alexander Fleming went on vacation in 1928, leaving dirty petri dishes behind. When he came back, a rogue airborne mold halo had completely slaughtered the surrounding bacteria.</p>
-                    <div class="fact-tag">💊 Penicillin has saved over 200 million human lives.</div>
-                </div>
-
-                <div class="card">
-                    <span class="badge society">MATH</span>
-                    <h3>12. Origin of Zero (0)</h3>
-                    <p>While used as empty placeholders earlier, Indian mathematician Brahmagupta in 628 AD formally defined zero as an actual number with real rules, revolutionizing trade and algebra.</p>
-                    <div class="fact-tag">0️⃣ Roman numerals collapsed in science because they had no zero.</div>
-                </div>
-
-                <div class="card">
-                    <span class="badge food">FOOD</span>
-                    <h3>13. Origin of Chocolate</h3>
-                    <p>Consumed by Mayan and Aztec cultures for 3,000+ years as a bitter, spicy, frothy ritual drink mixed with chili peppers. Cocoa beans were so prized they were spent as currency.</p>
-                    <div class="fact-tag">🍫 Sweet solid chocolate bars were only invented in 1847!</div>
-                </div>
-
-                <div class="card">
-                    <span class="badge cosmos">COSMOS</span>
-                    <h3>14. Origin of the Moon</h3>
-                    <p>The Giant Impact theory says a Mars-sized planet named Theia smashed head-on into early Earth 4.5 billion years ago. The blown-off mantle debris formed our loyal Moon.</p>
-                    <div class="fact-tag">🌕 The Moon drifts 3.8 cm further away from us every year.</div>
-                </div>
-
-                <div class="card">
-                    <span class="badge society">DAILY LIFE</span>
-                    <h3>15. Origin of Soap</h3>
-                    <p>Babylonians boiled animal fats with alkaline wood ashes back in 2800 BC. Roman women later noticed that rainwater washing ashes from Mount Sapo into river clay washed garments easily.</p>
-                    <div class="fact-tag">🧼 The word 'Soap' comes directly from Mount Sapo!</div>
-                </div>
-
-                <div class="card">
-                    <span class="badge tech">TECH</span>
-                    <h3>16. Origin of QWERTY</h3>
-                    <p>Christopher Sholes designed the QWERTY keyboard in 1873 to deliberately separate common letters like S and T so mechanical typewriter levers wouldn't crash and jam.</p>
-                    <div class="fact-tag">⌨️ You can type 'TYPEWRITER' using solely the top row!</div>
-                </div>
-
-                <div class="card">
-                    <span class="badge food">DAILY LIFE</span>
-                    <h3>17. Origin of Pencils</h3>
-                    <p>In 1564, a massive storm uprooted huge trees in England, uncovering an enormous pure graphite mine. Locals initially branded sheep with it, then wrapped it in wood.</p>
-                    <div class="fact-tag">✏️ Pencils never had lead; people just confused graphite with lead.</div>
-                </div>
-
-                <div class="card">
-                    <span class="badge nature">NATURE</span>
-                    <h3>18. Origin of Glass</h3>
-                    <p>Nature invented glass first: volcanic obsidian and lightning striking silica sand dunes at 1800°C. Merchants cooking over soda blocks on beaches later discovered how to melt it.</p>
-                    <div class="fact-tag">⚡ Lightning creates hollow glass tubes underground called fulgurites!</div>
-                </div>
-
-                <div class="card">
-                    <span class="badge society">LAW</span>
-                    <h3>19. Origin of Fingerprints</h3>
-                    <p>In 1858 British India, William Herschel used palm prints to prevent contract fraud. Dr. Henry Faulds later proved fingerprint ridge patterns are permanent and completely unique to you.</p>
-                    <div class="fact-tag">🔍 Identical twins have identical DNA, but different fingerprints!</div>
-                </div>
-
-                <div class="card">
-                    <span class="badge tech">INTERNET</span>
-                    <h3>20. Origin of Smiley Emoji</h3>
-                    <p>On September 19, 1982, computer scientist Scott Fahlman proposed typing :-) for jokes on the university message boards to stop unnecessary digital text arguments.</p>
-                    <div class="fact-tag">🙂 The original digital post was recovered from 1982 backup tapes.</div>
-                </div>
-
+            <div class="articles-grid" id="articles-grid">
+                <!-- 20 Articles injected dynamically via JavaScript with real-time border glow -->
             </div>
         </section>
 
-        <!-- Pure CSS Interactive Quiz Section -->
+        <!-- Dynamic Multi-Question Quiz -->
         <section id="quiz" class="quiz-section">
-            <h2>🧠 Origin Trivia Challenge</h2>
-            <p class="quiz-sub">Click an option below to test your origin knowledge!</p>
+            <div class="quiz-wrapper">
+                <span class="sub-badge">INTERACTIVE ARENA</span>
+                <h2 class="glow-title">The Master Origin Quiz</h2>
+                <p>Prove your memory across historical and cosmic beginnings.</p>
 
-            <div class="quiz-card">
-                <p class="quiz-q">Question 1: Where was all the gold on Earth originally created?</p>
-                <div class="quiz-options-group">
-                    <label class="q-opt wrong">
-                        <input type="radio" name="q1">
-                        <span>A. Earth's boiling core</span>
-                        <div class="answer-reveal">❌ Incorrect! Gold cannot be created inside Earth's core.</div>
-                    </label>
-
-                    <label class="q-opt correct">
-                        <input type="radio" name="q1">
-                        <span>B. Ancient colliding neutron stars</span>
-                        <div class="answer-reveal">🎉 Spot on! Stellar collisions generate the nuclear energy to create heavy gold!</div>
-                    </label>
-
-                    <label class="q-opt wrong">
-                        <input type="radio" name="q1">
-                        <span>C. Underwater deep-sea volcanoes</span>
-                        <div class="answer-reveal">❌ Incorrect! Volcanic heat is nowhere near hot enough to forge gold.</div>
-                    </label>
-                </div>
-            </div>
-
-            <div class="quiz-card">
-                <p class="quiz-q">Question 2: What was the very first computer mouse made of in 1964?</p>
-                <div class="quiz-options-group">
-                    <label class="q-opt wrong">
-                        <input type="radio" name="q2">
-                        <span>A. Molded plastic</span>
-                        <div class="answer-reveal">❌ Incorrect! Commercial plastics weren't used for this prototype.</div>
-                    </label>
-
-                    <label class="q-opt correct">
-                        <input type="radio" name="q2">
-                        <span>B. Hand-carved pine wood</span>
-                        <div class="answer-reveal">🎉 Correct! Douglas Engelbart hand-carved the casing out of wood!</div>
-                    </label>
-
-                    <label class="q-opt wrong">
-                        <input type="radio" name="q2">
-                        <span>C. Heavy cast iron</span>
-                        <div class="answer-reveal">❌ Incorrect! Cast iron would have been far too heavy to slide.</div>
-                    </label>
+                <div class="quiz-box" id="quiz-box">
+                    <div class="quiz-meta">
+                        <span id="quiz-step">Question 1 of 5</span>
+                        <span id="quiz-score-live">Score: 0</span>
+                    </div>
+                    <h3 id="quiz-q-title">Loading Question...</h3>
+                    <div class="quiz-options" id="quiz-options"></div>
+                    <div id="quiz-feedback" class="quiz-feedback"></div>
+                    <button id="next-question-btn" class="btn btn-glow next-btn" onclick="nextQuestion()">Next Question ➔</button>
                 </div>
             </div>
         </section>
 
-        <!-- College Project Showcase Section -->
+        <!-- About Project Section (College Project Showcase - No Coding Talk) -->
         <section id="about" class="about-section">
-            <h2>🎓 About This Project</h2>
-            <p><strong>Origin of Things</strong> is a frontend web development showcase designed to demonstrate semantic HTML5 structure, modern CSS Grid/Flexbox architecture, neon glassmorphism aesthetics, and pure CSS interactive workflows.</p>
-            <div class="tags-row">
-                <span class="chip">College Capstone</span>
-                <span class="chip">HTML5 / Modern CSS</span>
-                <span class="chip">Zero JavaScript</span>
-                <span class="chip">GitHub Pages Ready</span>
+            <div class="about-content">
+                <span class="sub-badge">ACADEMIC INITIATIVE</span>
+                <h2 class="glow-title">About This Academic Project</h2>
+                <p>
+                    <strong>Origin of Things</strong> is a dedicated university student project founded on a simple question: <em>How did ordinary objects and fundamental phenomena come into existence?</em>
+                </p>
+                <p>
+                    Born in a college dorm out of late-night curiosities and academic inquiry, this project aims to bridge the gap between heavy academic encyclopedias and everyday readers. It brings stories of human resilience, serendipity, and celestial evolution into one immersive haven designed to rekindle the joy of learning.
+                </p>
+                <div class="honor-badge">
+                    <span>🎓 University Term Project</span>
+                    <span>&bull;</span>
+                    <span>Dedicated to Lifelong Seekers</span>
+                </div>
             </div>
         </section>
     </main>
 
     <!-- Footer -->
     <footer>
-        <p>Created for GitHub | Origin of Things &copy; 2026</p>
+        <p>&copy; Origin of Things &bull; College Capstone Project &bull; Dedicated to Curious Minds Everywhere</p>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>
